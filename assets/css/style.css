@@ -1,0 +1,36 @@
+/* Ocultar flechas por defecto de Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+/* Degradados laterales sobre los slides parciales */
+.fade-left {
+  background: linear-gradient(to right, var(--tw-bg-white), transparent);
+}
+.dark .fade-left {
+  background: linear-gradient(to right, var(--tw-bg-gray-900), transparent);
+}
+
+.fade-right {
+  background: linear-gradient(to left, var(--tw-bg-white), transparent);
+}
+.dark .fade-right {
+  background: linear-gradient(to left, var(--tw-bg-gray-900), transparent);
+}
+
+/* Asegúrate que el contenedor swiper sea relativo */
+.swiper {
+  position: relative;
+  padding-bottom: 3rem;
+  padding-top: 8px;
+}
+
+@media (min-width: 1024px) {
+  .cols-custom {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 2.5rem; /* igual a gap-10 */
+    align-items: start;
+  }
+}

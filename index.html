@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Duver Betancur – Desarrollador de Software</title>
-  <!-- TailwindCSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-  <!-- FontAwesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <!-- SwiperJS CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
 
-  <!-- Ocultar flechas por defecto de Swiper -->
-  <style>
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      display: none;
-    }
-  </style>
+  <!-- TailwindCSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- SwiperJS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body
-  class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 overflow-x-hidden"
->
+  class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 overflow-x-hidden">
   <div class="min-h-screen flex flex-col">
     <!-- Header / Hero -->
     <header
-      class="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-gray-900 dark:to-gray-700 text-white p-8 transition-colors duration-500"
-    >
-      <div
-        class="container mx-auto flex flex-col md:flex-row items-center justify-between"
-      >
+      class="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-gray-900 dark:to-gray-700 text-white p-8 transition-colors duration-500">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <!-- Perfil -->
         <div class="flex items-center space-x-6">
-          <img
-            src="ProfilePhoto.png"
-            alt="Duver Betancur"
-            class="w-24 h-24 rounded-full ring-4 ring-white"
-          />
+          <img src="assets/img/ProfilePhoto.png" alt="Duver Betancur"
+            class="w-24 h-24 rounded-full ring-4 ring-white" />
           <div>
             <h1 class="text-4xl font-extrabold">Duver Betancur</h1>
             <p class="mt-2 text-xl">
@@ -59,47 +40,29 @@
         <!-- Dark Mode + Botones de acción -->
         <div class="mt-4 md:mt-0 flex items-center space-x-4">
           <!-- Dark Mode Toggle -->
-          <button
-            id="theme-toggle"
-            class="fixed top-1/2 left-4 transform -translate-y-1/2
-                   bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg
-                   focus:outline-none transition duration-300"
-          >
-            <i
-              id="theme-toggle-icon"
-              class="fa-solid fa-moon text-indigo-600"
-            ></i>
+          <button id="theme-toggle"
+            class="fixed top-1/2 left-4 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg focus:outline-none transition duration-300">
+            <i id="theme-toggle-icon" class="fa-solid fa-moon text-indigo-600"></i>
           </button>
           <!-- Botones de Acción -->
           <div class="flex flex-wrap gap-4">
-            <a
-              href="mailto:duverbetancurbedoya@outlook.com"
-              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
-            >
+            <a href="mailto:duverbetancurbedoya@outlook.com"
+              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
               <i class="fa-solid fa-envelope mr-2 text-indigo-600 dark:text-indigo-400"></i>
               Correo
             </a>
-            <a
-              href="https://github.com/Duver0"
-              target="_blank"
-              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
-            >
+            <a href="https://github.com/Duver0" target="_blank"
+              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
               <i class="fa-brands fa-github mr-2 text-indigo-600 dark:text-indigo-400"></i>
               GitHub
             </a>
-            <a
-              href="https://www.linkedin.com/in/duver-betancur-bedoya-385748201/"
-              target="_blank"
-              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
-            >
+            <a href="https://www.linkedin.com/in/duver-betancur-bedoya-385748201/" target="_blank"
+              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
               <i class="fa-brands fa-linkedin mr-2 text-indigo-600 dark:text-indigo-400"></i>
               LinkedIn
             </a>
-            <a
-              href="DuverBetancurCV.pdf"
-              target="_blank"
-              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
-            >
+            <a href="assets/pdf/DuverBetancurCV.pdf" target="_blank"
+              class="flex items-center px-4 py-2 text-indigo-600 bg-white dark:bg-gray-800 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
               <i class="fa-solid fa-file-lines mr-2 text-indigo-600 dark:text-indigo-400"></i>
               Descargar CV
             </a>
@@ -109,188 +72,184 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto max-w-7xl px-4 py-12 space-y-16">
-      <!-- Sobre mí -->
-      <section id="about" class="text-center">
-        <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
-        <p class="max-w-7xl mx-auto leading-relaxed">
-          Soy desarrollador con más de <strong>3 años de experiencia</strong> en
-          ciberseguridad, desarrollo web y automatización. He trabajado con
-          tecnologías como <strong>React</strong>, <strong>Redux</strong>,
-          <strong>Laravel</strong> y <strong>MySQL</strong>. Me apasiona resolver
-          retos técnicos, implementar soluciones escalables y colaborar en
-          equipos multidisciplinarios.
-        </p>
-      </section>
-
-      <!-- Proyectos Destacados (Grid + Sticky Carrusel) -->
-      <section id="projects">
-        <h2 class="text-3xl font-bold mb-8 text-center">
-          Proyectos Destacados
-        </h2>
-        <div class="relative grid grid-cols-[auto_1fr_auto] items-center gap-4 px-4 overflow-hidden">
-          <!-- Botón Anterior -->
-          <button
-            class="swiper-button-prev sticky top-1/2 -translate-y-1/2 z-20 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg focus:outline-none"
-          >
-            <i class="fa-solid fa-chevron-left text-gray-700 dark:text-gray-200"></i>
-          </button>
-
-          <!-- Swiper -->
-          <div class="swiper-container col-span-1">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
-                <img
-                  src="default.jpg"
-                  alt="Proyecto Preguntas y Respuestas"
-                  class="w-full h-48 object-cover rounded"
-                />
-                <h3 class="mt-4 font-semibold">Preguntas y Respuestas</h3>
-                <p class="text-sm leading-snug">
-                  App de Q&A con React, Laravel y WebSockets.
-                </p>
-                <a
-                  href="https://github.com/Duver0/Preguntas-y-Respuestas"
-                  target="_blank"
-                  class="text-indigo-600 dark:text-indigo-400 hover:underline"
-                >
-                  Ver en GitHub →
-                </a>
+<main class="flex-grow container mx-auto max-w-7xl  py-12">
+  <div class="grid-cols-1 cols-custom">
+        <!-- Columna izquierda: Habilidades Técnicas -->
+        <aside>
+          <section id="skills">
+            <div class="grid grid-cols-1 gap-5">
+              <!-- Card Frontend -->
+              <div
+                class="relative group bg-gradient-to-br from-indigo-50/70 to-white dark:from-indigo-800/30 dark:to-gray-800 p-7 rounded-2xl shadow-lg border border-indigo-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span
+                    class="inline-flex items-center justify-center rounded-full bg-indigo-600 text-white p-3 shadow-md text-lg">
+                    <i class="fa-solid fa-code"></i>
+                  </span>
+                  <h3 class="font-bold text-xl text-indigo-700 dark:text-indigo-200 tracking-tight">Frontend</h3>
+                </div>
+                <ul class="list-none space-y-2 pl-0 text-gray-700 dark:text-gray-200">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-brands fa-react text-indigo-500"></i>
+                    React, Redux, TailwindCSS
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-indigo-400"></i>
+                    Next.js / Inertia.js
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-mobile-alt text-indigo-400"></i>
+                    Responsive &amp; Mobile First
+                  </li>
+                </ul>
+                <span
+                  class="absolute right-4 top-4 opacity-10 text-5xl text-indigo-200 dark:text-indigo-500 pointer-events-none group-hover:opacity-20 transition">{"
+                  <>"}</span>
               </div>
-              <!-- Slide 2 -->
-              <div class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
-                <img
-                  src="default.jpg"
-                  alt="Proyecto CESW4"
-                  class="w-full h-48 object-cover rounded"
-                />
-                <h3 class="mt-4 font-semibold">CESW4</h3>
-                <p class="text-sm leading-snug">
-                  Proyecto de prueba CESW4: módulo de ejemplo con funcionalidades X, Y y Z.
-                </p>
-                <a
-                  href="https://github.com/Duver0/CESW4"
-                  target="_blank"
-                  class="text-indigo-600 dark:text-indigo-400 hover:underline"
-                >
-                  Ver en GitHub →
-                </a>
+              <!-- Card Backend -->
+              <div
+                class="relative group bg-gradient-to-br from-yellow-50/70 to-white dark:from-yellow-800/20 dark:to-gray-800 p-7 rounded-2xl shadow-lg border border-yellow-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span
+                    class="inline-flex items-center justify-center rounded-full bg-yellow-500 text-white p-3 shadow-md text-lg">
+                    <i class="fa-solid fa-database"></i>
+                  </span>
+                  <h3 class="font-bold text-xl text-yellow-700 dark:text-yellow-200 tracking-tight">Backend</h3>
+                </div>
+                <ul class="list-none space-y-2 pl-0 text-gray-700 dark:text-gray-200">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-brands fa-php text-yellow-500"></i>
+                    PHP &amp; Laravel
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-network-wired text-yellow-400"></i>
+                    APIs RESTful / GraphQL
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-database text-yellow-400"></i>
+                    MySQL / PostgreSQL
+                  </li>
+                </ul>
+                <span
+                  class="absolute right-4 top-4 opacity-10 text-5xl text-yellow-200 dark:text-yellow-500 pointer-events-none group-hover:opacity-20 transition">{"{DB}"}</span>
               </div>
-              <!-- Slide 3 -->
-              <div class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
-                <img
-                  src="default.jpg"
-                  alt="Proyecto Ejemplo"
-                  class="w-full h-48 object-cover rounded"
-                />
-                <h3 class="mt-4 font-semibold">Proyecto Ejemplo</h3>
-                <p class="text-sm leading-snug">
-                  Descripción estática de un proyecto de ejemplo para aumentar el carrusel.
-                </p>
-                <a
-                  href="#"
-                  class="text-indigo-600 dark:text-indigo-400 hover:underline"
-                >
-                  Ver más →
-                </a>
+              <!-- Card Automatización y Seguridad -->
+              <div
+                class="relative group bg-gradient-to-br from-teal-50/70 to-white dark:from-teal-800/30 dark:to-gray-800 p-7 rounded-2xl shadow-lg border border-teal-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span
+                    class="inline-flex items-center justify-center rounded-full bg-teal-600 text-white p-3 shadow-md text-lg">
+                    <i class="fa-solid fa-shield-alt"></i>
+                  </span>
+                  <h3 class="font-bold text-xl text-teal-700 dark:text-teal-200 tracking-tight">Automatización y
+                    Seguridad</h3>
+                </div>
+                <ul class="list-none space-y-2 pl-0 text-gray-700 dark:text-gray-200">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-brands fa-python text-teal-500"></i>
+                    Python &amp; Selenium
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-vial text-teal-400"></i>
+                    Pruebas automatizadas
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-user-secret text-teal-400"></i>
+                    Análisis de vulnerabilidades
+                  </li>
+                </ul>
+                <span
+                  class="absolute right-4 top-4 opacity-10 text-5xl text-teal-200 dark:text-teal-500 pointer-events-none group-hover:opacity-20 transition">{"<S>"}</span>
               </div>
             </div>
-            <!-- Paginación -->
-            <div class="swiper-pagination mt-4"></div>
-          </div>
+          </section>
+        </aside>
 
-          <!-- Botón Siguiente -->
-          <button
-            class="swiper-button-next sticky top-1/2 -translate-y-1/2 z-20 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg focus:outline-none"
-          >
-            <i class="fa-solid fa-chevron-right text-gray-700 dark:text-gray-200"></i>
-          </button>
-        </div>
-      </section>
+        <!-- Columna derecha: Contenido principal (Sobre mí y Proyectos) -->
+        <div class="flex flex-col space-y-16">
+          <!-- Sobre mí -->
+          <section id="about" class="text-center">
+            <p class="max-w-7xl mx-auto leading-relaxed">
+              Soy desarrollador con más de <strong>3 años de experiencia</strong> en
+              ciberseguridad, desarrollo web y automatización. He trabajado con
+              tecnologías como <strong>React</strong>, <strong>Redux</strong>,
+              <strong>Laravel</strong> y <strong>MySQL</strong>. Me apasiona resolver
+              retos técnicos, implementar soluciones escalables y colaborar en
+              equipos multidisciplinarios.
+            </p>
+          </section>
 
-      <!-- Habilidades Técnicas -->
-      <section id="skills">
-        <h2 class="text-3xl font-bold mb-4 text-center">
-          Habilidades Técnicas
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow transition-colors duration-300">
-            <h3 class="font-semibold mb-2">Frontend</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li>React, Redux, TailwindCSS</li>
-              <li>Next.js / Inertia.js</li>
-              <li>Responsive &amp; Mobile First</li>
-            </ul>
-          </div>
-          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow transition-colors duration-300">
-            <h3 class="font-semibold mb-2">Backend</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li>PHP &amp; Laravel</li>
-              <li>APIs RESTful / GraphQL</li>
-              <li>MySQL / PostgreSQL</li>
-            </ul>
-          </div>
-          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow transition-colors duration-300">
-            <h3 class="font-semibold mb-2">Automatización y Seguridad</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Python &amp; Selenium</li>
-              <li>Pruebas automatizadas</li>
-              <li>Análisis de vulnerabilidades</li>
-            </ul>
-          </div>
+          <!-- Proyectos Destacados -->
+          <section id="projects">
+            <div class="relative grid grid-cols-[auto_1fr_auto] items-center gap-4 px-4 overflow-hidden">
+              <!-- Flecha izquierda -->
+              <button
+                class="swiper-button-prev sticky top-1/2 -translate-y-1/2 z-20 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg focus:outline-none">
+                <i class="fa-solid fa-chevron-left text-gray-700 dark:text-gray-200"></i>
+              </button>
+              <!-- Contenedor swiper con degradados -->
+              <div class="swiper col-span-1 relative">
+                <div class="absolute inset-y-0 left-0 w-16 pointer-events-none fade-left"></div>
+                <div class="absolute inset-y-0 right-0 w-16 pointer-events-none fade-right"></div>
+                <div class="swiper-wrapper">
+                  <!-- Slides de ejemplo... -->
+                  <div
+                    class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
+                    <img src="assets/img/default.jpg" alt="Proyecto Q&A" class="w-full h-72 object-cover rounded" />
+                    <h3 class="mt-4 font-semibold">Preguntas y Respuestas</h3>
+                    <p class="text-sm leading-snug">App de Q&A en tiempo real con React, Laravel y WebSockets.</p>
+                    <a href="https://github.com/Duver0/Preguntas-y-Respuestas" target="_blank"
+                      class="text-indigo-600 dark:text-indigo-400 hover:underline">Ver en GitHub →</a>
+                  </div>
+                  <div
+                    class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
+                    <img src="assets/img/default.jpg" alt="Proyecto CESW4" class="w-full h-72 object-cover rounded" />
+                    <h3 class="mt-4 font-semibold">CESW4</h3>
+                    <p class="text-sm leading-snug">Módulo de ejemplo con funcionalidades X, Y y Z para prueba CESW4.
+                    </p>
+                    <a href="https://github.com/Duver0/CESW4" target="_blank"
+                      class="text-indigo-600 dark:text-indigo-400 hover:underline">Ver en GitHub →</a>
+                  </div>
+                  <div
+                    class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
+                    <img src="assets/img/default.jpg" alt="Portfolio Personal"
+                      class="w-full h-72 object-cover rounded" />
+                    <h3 class="mt-4 font-semibold">Portfolio Personal</h3>
+                    <p class="text-sm leading-snug">Mi sitio web de presentación construido con HTML, CSS y JS.</p>
+                    <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:underline">Ver más →</a>
+                  </div>
+                  <div
+                    class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
+                    <img src="assets/img/default.jpg" alt="Blog App" class="w-full h-72 object-cover rounded" />
+                    <h3 class="mt-4 font-semibold">Blog App</h3>
+                    <p class="text-sm leading-snug">Aplicación de blog con autenticación, CRUD y comentarios.</p>
+                    <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:underline">Ver más →</a>
+                  </div>
+                  <div
+                    class="swiper-slide flex-shrink-0 w-72 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-colors duration-300">
+                    <img src="assets/img/default.jpg" alt="ToDo App" class="w-full h-72 object-cover rounded" />
+                    <h3 class="mt-4 font-semibold">ToDo App</h3>
+                    <p class="text-sm leading-snug">Gestor de tareas con drag & drop y almacenamiento local.</p>
+                    <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:underline">Ver más →</a>
+                  </div>
+                </div>
+                <div class="swiper-pagination mt-4"></div>
+              </div>
+              <!-- Flecha derecha -->
+              <button
+                class="swiper-button-next sticky top-1/2 -translate-y-1/2 z-20 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg focus:outline-none">
+                <i class="fa-solid fa-chevron-right text-gray-700 dark:text-gray-200"></i>
+              </button>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-200 dark:bg-gray-800 text-center py-6 transition-colors duration-300">
-      <p>© 2025 Duver Betancur</p>
-    </footer>
   </div>
-
   <!-- SwiperJS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 20,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next'
-      }
-    });
-  </script>
-
-  <!-- Dark Mode Script -->
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const toggleIcon = document.getElementById('theme-toggle-icon');
-    const root = document.documentElement;
-
-    // Aplicar tema guardado
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      root.classList.toggle('dark', savedTheme === 'dark');
-      toggleIcon.className = savedTheme === 'dark'
-        ? 'fa-solid fa-sun text-yellow-400'
-        : 'fa-solid fa-moon text-indigo-600';
-    }
-
-    // Alternar tema
-    toggleBtn.addEventListener('click', () => {
-      const isDark = root.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      toggleIcon.className = isDark
-        ? 'fa-solid fa-sun text-yellow-400'
-        : 'fa-solid fa-moon text-indigo-600';
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
