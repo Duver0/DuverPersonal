@@ -1,0 +1,6 @@
+[install]
+# Mantiene la compatibilidad con dependencias peer opcionales de herramientas front-end
+peer-dependency-rules = "loose"
+
+[test]
+target = "bun"  # facilita ejecutar pruebas futuras con `bun test`

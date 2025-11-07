@@ -1,0 +1,33 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: theme('fontFamily.body');
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.projects-pagination .swiper-pagination-bullet {
+  background: #c7d2fe;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.projects-pagination .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 9999px;
+  background: #6366f1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
