@@ -7,7 +7,7 @@ export const HERO_PROFILE = {
     'Combino desarrollo web, ciberseguridad y automatización para crear productos estables, monitoreables y listos para crecer desde el día uno.',
   location: 'Medellín, CO',
   availability: 'Disponible para freelance',
-  photo: '/assets/img/ProfilePhoto.png',
+  photo: 'assets/img/ProfilePhoto.png',
   highlightMetrics: [
     { label: 'Lanzamientos', value: '24' },
     { label: 'Módulos desarrollados end-to-end', value: '+12' },
@@ -30,7 +30,7 @@ export const CTA_LINKS = [
   },
   {
     label: 'Descargar CV',
-    href: '/assets/pdf/DuverBetancurCV.pdf',
+    href: 'assets/pdf/DuverBetancurCV.pdf',
     icon: 'fa-file-arrow-down',
   },
 ];
@@ -101,7 +101,7 @@ export const PROJECTS = [
     title: 'Preguntas y Respuestas',
     description:
       'Plataforma interactiva tipo AMA para equipos internos, actualizada en tiempo real mediante WebSockets.',
-    image: '/assets/img/default.jpg',
+    image: 'assets/img/default.jpg',
     stack: ['React', 'Laravel', 'Echo'],
     link: 'https://github.com/Duver0/Preguntas-y-Respuestas',
     metric: '+300 usuarios concurrentes',
@@ -110,7 +110,7 @@ export const PROJECTS = [
     title: 'CESW4',
     description:
       'Módulo académico con panel administrativo, autenticación y control de versiones para contenido técnico.',
-    image: '/assets/img/default.jpg',
+    image: 'assets/img/default.jpg',
     stack: ['Laravel', 'PostgreSQL', 'Tailwind'],
     link: 'https://github.com/Duver0/CESW4',
     metric: '100% uptime en QA',
@@ -118,7 +118,7 @@ export const PROJECTS = [
   {
     title: 'Automatizador financiero',
     description: 'Robot RPA que integra bancos locales con dashboards internos y alertas por Telegram.',
-    image: '/assets/img/default.jpg',
+    image: 'assets/img/default.jpg',
     stack: ['Python', 'Playwright', 'Supabase'],
     link: '#',
     metric: '4h ahorradas a diario',
