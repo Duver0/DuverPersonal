@@ -13,9 +13,9 @@ Portafolio personal construido con React, Vite y Tailwind. Preparado para trabaj
 - `bun run dev` – levanta el servidor de desarrollo (Vite) en `http://localhost:5173`.
 - `bun run build` – genera la carpeta `dist` lista para producción.
 - `bun run preview` – sirve el build de producción de forma local.
-- `bun run deploy` – ejecuta el build y publica `dist` en la rama `gh-pages` usando `gh-pages`.
+- `bun run deploy` – compila con el `base` apuntando a `/DuverPersonal/` y publica `dist` en la rama `gh-pages` usando `gh-pages`.
 
-> Si necesitas publicar en un subdirectorio (por ejemplo `https://usuario.github.io/repositorio/`), exporta `VITE_BASE_PATH="/repositorio/"` antes de correr `bun run deploy`.
+> Si necesitas otro subdirectorio diferente a `/DuverPersonal/`, redefine `VITE_BASE_PATH` al ejecutar el script (`VITE_BASE_PATH=/tu/ruta bun run deploy`) o ajusta la variable directamente en `package.json`.
 
 ## Despliegue en GitHub Pages
 
@@ -26,5 +26,6 @@ Portafolio personal construido con React, Vite y Tailwind. Preparado para trabaj
 ## Estructura
 
 - `src/` contiene la app en React completamente componentizada.
-- `public/` aloja imágenes y el CV para ser servidos sin importar el framework.
+- `src/assets/` contiene imágenes y documentos estáticos que Vite empaca respetando el `base` configurado.
+- `public/` queda disponible para cualquier archivo estático adicional que no necesite pasar por el pipeline.
 - `bunfig.toml`, `tailwind.config.js`, `vite.config.js` contienen la configuración del tooling.

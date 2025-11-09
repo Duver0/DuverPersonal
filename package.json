@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist --dotfiles"
+    "deploy": "VITE_BASE_PATH=/DuverPersonal/ vite build && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "react": "^18.3.1",

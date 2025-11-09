@@ -1,6 +1,6 @@
-import profilePhoto from '/assets/img/ProfilePhoto.png';
-import defaultProjectImage from '/assets/img/default.jpg';
-import cvPdf from '/assets/pdf/DuverBetancurCV.pdf';
+import profilePhoto from '../assets/img/ProfilePhoto.png';
+import defaultProjectImage from '../assets/img/default.jpg';
+import cvPdf from '../assets/pdf/DuverBetancurCV.pdf';
 
 export const EXPERIENCE_START_YEAR = 2022;
 
@@ -105,7 +105,7 @@ export const PROJECTS = [
     title: 'Preguntas y Respuestas',
     description:
       'Plataforma interactiva tipo AMA para equipos internos, actualizada en tiempo real mediante WebSockets.',
-    image: 'https://opengraph.githubassets.com/1/Duver0/Preguntas-y-Respuestas',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas/?w=1200',
     stack: ['React', 'Laravel', 'Echo'],
     link: 'https://duver0.github.io/Preguntas-y-Respuestas/',
     metric: 'Laravel Echo + WebSockets en vivo',
