@@ -56,11 +56,15 @@ const ProjectsCarousel = () => {
           navigation={navReady ? { prevEl: prevRef.current, nextEl: nextRef.current } : undefined}
           pagination={{ el: '.projects-pagination', clickable: true }}
         >
-          {PROJECTS.map((project) => (
-            <SwiperSlide key={project.title} className="pt-6">
-              <article className="group h-full min-h-[460px] rounded-3xl border border-slate-100 bg-gradient-to-b from-white to-slate-50 p-6 shadow-lg shadow-slate-900/5 transition duration-500 hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:from-slate-900 dark:to-slate-900/30">
-                <div className="relative overflow-hidden rounded-3xl">
-                  <img
+          {PROJECTS.map((project) => {
+            const hasLink = typeof project.link === 'string' && project.link.trim().length > 0;
+            const isExternalLink = hasLink && project.link.startsWith('http');
+
+            return (
+              <SwiperSlide key={project.title} className="pt-6">
+                <article className="group h-full min-h-[460px] rounded-3xl border border-slate-100 bg-gradient-to-b from-white to-slate-50 p-6 shadow-lg shadow-slate-900/5 transition duration-500 hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:from-slate-900 dark:to-slate-900/30">
+                  <div className="relative overflow-hidden rounded-3xl">
+                    <img
                     src={project.image}
                     alt={`Proyecto ${project.title}`}
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
@@ -82,19 +86,27 @@ const ProjectsCarousel = () => {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={project.link}
-                    target={project.link.startsWith('http') ? '_blank' : undefined}
-                    rel={project.link.startsWith('http') ? 'noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-500"
-                  >
-                    Ver detalle
-                    <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
-                  </a>
+                  {hasLink ? (
+                    <a
+                      href={project.link}
+                      target={isExternalLink ? '_blank' : undefined}
+                      rel={isExternalLink ? 'noreferrer' : undefined}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-500"
+                    >
+                      Ver demo
+                      <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400">
+                      Demo privada
+                      <i className="fa-solid fa-lock text-xs" />
+                    </span>
+                  )}
                 </div>
               </article>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         <div className="projects-pagination mt-6" />
       </div>

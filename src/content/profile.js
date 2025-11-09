@@ -101,9 +101,9 @@ export const PROJECTS = [
     title: 'Preguntas y Respuestas',
     description:
       'Plataforma interactiva tipo AMA para equipos internos, actualizada en tiempo real mediante WebSockets.',
-    image: 'assets/img/default.jpg',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas?w=1200',
     stack: ['React', 'Laravel', 'Echo'],
-    link: 'https://github.com/Duver0/Preguntas-y-Respuestas',
+    link: 'https://duver0.github.io/Preguntas-y-Respuestas/',
     metric: '+300 usuarios concurrentes',
   },
   {
@@ -112,7 +112,7 @@ export const PROJECTS = [
       'Módulo académico con panel administrativo, autenticación y control de versiones para contenido técnico.',
     image: 'assets/img/default.jpg',
     stack: ['Laravel', 'PostgreSQL', 'Tailwind'],
-    link: 'https://github.com/Duver0/CESW4',
+    link: null,
     metric: '100% uptime en QA',
   },
   {
@@ -120,7 +120,7 @@ export const PROJECTS = [
     description: 'Robot RPA que integra bancos locales con dashboards internos y alertas por Telegram.',
     image: 'assets/img/default.jpg',
     stack: ['Python', 'Playwright', 'Supabase'],
-    link: '#',
+    link: null,
     metric: '4h ahorradas a diario',
   },
 ];
