@@ -1,5 +1,44 @@
 export const EXPERIENCE_START_YEAR = 2022;
 
+const getRuntimeBasePath = () => {
+  if (typeof window === 'undefined' || typeof window.location !== 'object') return null;
+  if (window.location.protocol === 'file:') return './';
+  let path = window.location.pathname || '/';
+  if (!path || path === '/') return '/';
+
+  if (!path.endsWith('/')) {
+    const lastSegment = path.slice(path.lastIndexOf('/') + 1);
+    if (lastSegment && lastSegment.includes('.')) {
+      const trimmed = path.slice(0, path.lastIndexOf('/') + 1);
+      path = trimmed || '/';
+    } else {
+      path = `${path}/`;
+    }
+  }
+
+  return path;
+};
+
+const resolveBasePath = () => {
+  const envBase = import.meta.env?.BASE_URL ?? '/';
+  if (envBase && envBase !== './') return envBase;
+  const runtimeBase = getRuntimeBasePath();
+  return runtimeBase ?? envBase;
+};
+
+const normalizeBase = (base) => {
+  if (base === './') return './';
+  if (!base || base === '/') return '/';
+  return base.endsWith('/') ? base : `${base}/`;
+};
+
+const withBase = (relativePath) => {
+  const sanitizedPath = relativePath.replace(/^\//, '');
+  const base = normalizeBase(resolveBasePath());
+  if (base === './') return `./${sanitizedPath}`;
+  return `${base}${sanitizedPath}`;
+};
+
 export const HERO_PROFILE = {
   name: 'Duver Betancur',
   headline: 'Desarrollador Full Stack & Automation Engineer',
@@ -7,7 +46,7 @@ export const HERO_PROFILE = {
     'Combino desarrollo web, ciberseguridad y automatización para crear productos estables, monitoreables y listos para crecer desde el día uno.',
   location: 'Medellín, CO',
   availability: 'Disponible para freelance',
-  photo: 'assets/img/ProfilePhoto.png',
+  photo: withBase('assets/img/ProfilePhoto.png'),
   highlightMetrics: [
     { label: 'Lanzamientos', value: '24' },
     { label: 'Módulos desarrollados end-to-end', value: '+12' },
@@ -30,7 +69,7 @@ export const CTA_LINKS = [
   },
   {
     label: 'Descargar CV',
-    href: 'assets/pdf/DuverBetancurCV.pdf',
+    href: withBase('assets/pdf/DuverBetancurCV.pdf'),
     icon: 'fa-file-arrow-down',
   },
 ];
@@ -110,7 +149,7 @@ export const PROJECTS = [
     title: 'CESW4',
     description:
       'Módulo académico con panel administrativo, autenticación y control de versiones para contenido técnico.',
-    image: 'assets/img/default.jpg',
+    image: withBase('assets/img/default.jpg'),
     stack: ['Laravel', 'PostgreSQL', 'Tailwind'],
     link: null,
     metric: '100% uptime en QA',
@@ -118,7 +157,7 @@ export const PROJECTS = [
   {
     title: 'Automatizador financiero',
     description: 'Robot RPA que integra bancos locales con dashboards internos y alertas por Telegram.',
-    image: 'assets/img/default.jpg',
+    image: withBase('assets/img/default.jpg'),
     stack: ['Python', 'Playwright', 'Supabase'],
     link: null,
     metric: '4h ahorradas a diario',
