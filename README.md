@@ -24,14 +24,14 @@ Portafolio personal construido con React, Vite y Tailwind. Preparado para trabaj
 El repositorio incluye el workflow `.github/workflows/deploy.yml`. Cada push a `main` (o ejecución manual) hará:
 
 1. `bun install` + `bun run build` con `VITE_BASE_PATH=/DuverPersonal/`.
-2. Publicará automáticamente `dist/` en la rama `gh-pages`.
-3. Configura Settings → Pages → Source = `gh-pages` para que GitHub Pages sirva esa rama.
+2. Empaquetará `dist/` como artifact y lo publicará usando `actions/deploy-pages`.
+3. Solo necesitas dejar Settings → Pages → Source = “GitHub Actions”; GitHub servirá el artifact generado sin requerir una rama dedicada.
 
 ### Opción manual
 
-1. Configura la rama `gh-pages` como fuente en Settings → Pages.
+1. Cambia temporalmente Settings → Pages → Source = “Deploy from a branch” y selecciona `gh-pages`.
 2. Ejecuta `bun run deploy`; el script compila el sitio y sube el contenido de `dist` a `gh-pages`.
-3. Cada nueva ejecución sobrescribe el contenido anterior, lo que facilita automatizarlo desde GitHub Actions.
+3. Vuelve a “GitHub Actions” cuando quieras retomar el pipeline automatizado.
 
 ## Estructura
 
