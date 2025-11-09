@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portafolio en React de Duver Betancur: desarrollo full stack, automatización y ciberseguridad." />
+  <title>Duver Betancur – Desarrollador de Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    (function () {
+      const STORAGE_KEY = 'theme';
+      const isDarkPreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const persisted = window.localStorage.getItem(STORAGE_KEY);
+      const theme = persisted ?? (isDarkPreferred ? 'dark' : 'light');
+      const root = document.documentElement;
+      root.classList.toggle('dark', theme === 'dark');
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme;
+    })();
+  </script>
+  <script type="module" crossorigin src="/DuverPersonal/assets/index-mcqxHFRf.js"></script>
+  <link rel="stylesheet" crossorigin href="/DuverPersonal/assets/index-DNlhr5mX.css">
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 overflow-x-hidden">
+  <div id="root"></div>
+</body>
+
+</html>
