@@ -111,20 +111,21 @@ export const PROJECTS = [
     metric: 'Laravel Echo + WebSockets en vivo',
   },
   {
-    title: 'CESW4',
+    title: 'Generador de historias interactivas',
     description:
-      'Módulo académico con panel administrativo, autenticación y control de versiones para contenido técnico.',
-    image: defaultProjectImage,
-    stack: ['Laravel', 'PostgreSQL', 'Tailwind'],
-    link: null,
-    metric: '100% uptime en QA',
+      'Aplicación web que crea relatos ramificados a partir de decisiones del usuario y prompts personalizables.',
+    image:
+      'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FGenerador-de-historias-interactivas%2F?w=1200',
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    link: 'https://duver0.github.io/Generador-de-historias-interactivas/',
+    metric: 'Genera historias en segundos',
   },
   {
-    title: 'Automatizador financiero',
-    description: 'Robot RPA que integra bancos locales con dashboards internos y alertas por Telegram.',
+    title: 'Próximos proyectos',
+    description: 'Laboratorio creativo con minijuegos narrativos, bots experimentales y automatizaciones absurdamente útiles.',
     image: defaultProjectImage,
-    stack: ['Python', 'Playwright', 'Supabase'],
+    stack: ['React', 'Python', 'AI APIs'],
     link: null,
-    metric: '4h ahorradas a diario',
+    metric: 'Próximamente',
   },
 ];
