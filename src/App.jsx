@@ -23,12 +23,12 @@ const App = () => {
             <div className="min-w-0">
               <SkillsColumn />
             </div>
-            <div className="space-y-8 min-w-0">
-              <AboutSection />
+            <div className="space-y-12 min-w-0">
               <ExperienceTimeline />
             </div>
           </div>
           <ProjectsCarousel />
+          <AboutSection />
           <FooterCTA />
         </div>
       </div>

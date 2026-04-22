@@ -5,7 +5,7 @@ const ExperienceTimeline = () => (
   <Reveal delay={150}>
     <section className="rounded-3xl border border-slate-100 bg-white/90 p-8 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/40">
       <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-500">Experiencia</p>
-      <div className="mt-6 space-y-8">
+      <div className="mt-6 max-h-[720px] space-y-8 overflow-y-auto pr-2 scrollbar-thin">
         {EXPERIENCE.map((job, idx) => (
           <article key={job.role} className="flex gap-5">
             <div className="relative">
