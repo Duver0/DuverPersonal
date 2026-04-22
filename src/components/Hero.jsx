@@ -26,7 +26,7 @@ const Hero = () => (
                 cta.primary ? 'bg-white text-brand-700 hover:-translate-y-0.5' : 'bg-white/15 text-white hover:bg-white/25'
               }`}
             >
-              <i className={`fa-solid ${cta.icon} text-sm`} />
+              <i className={`${cta.brands ? 'fa-brands' : 'fa-solid'} ${cta.icon} text-sm`} />
               {cta.label}
             </a>
           ))}
@@ -42,14 +42,6 @@ const Hero = () => (
           />
           <p className="mt-4 text-sm uppercase tracking-[0.4em] text-brand-100">{HERO_PROFILE.location}</p>
           <p className="text-2xl font-heading">{HERO_PROFILE.availability}</p>
-          <div className="mt-6 grid grid-cols-2 gap-4 text-left text-sm">
-            {HERO_PROFILE.highlightMetrics.map((metric) => (
-              <div key={metric.label} className="rounded-2xl bg-white/10 p-3">
-                <p className="text-3xl font-heading">{metric.value}</p>
-                <p className="text-brand-100/80">{metric.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

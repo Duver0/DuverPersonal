@@ -74,10 +74,14 @@ const ProjectsCarousel = () => {
                     {project.metric}
                   </span>
                 </div>
-                <div className="mt-6 flex flex-col gap-3">
+                <div className="mt-6 flex flex-col gap-4">
                   <div>
                     <h3 className="text-xl font-heading">{project.title}</h3>
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{project.description}</p>
+                    <div className="mt-2 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                      {project.problem && <p><span className="font-semibold">Problema:</span> {project.problem}</p>}
+                      {project.solution && <p><span className="font-semibold">Solución:</span> {project.solution}</p>}
+                      {project.impact && <p><span className="font-semibold">Impacto:</span> {project.impact}</p>}
+                    </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
@@ -86,22 +90,36 @@ const ProjectsCarousel = () => {
                       </span>
                     ))}
                   </div>
-                  {hasLink ? (
-                    <a
-                      href={project.link}
-                      target={isExternalLink ? '_blank' : undefined}
-                      rel={isExternalLink ? 'noreferrer' : undefined}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-500"
-                    >
-                      Ver demo
-                      <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
-                    </a>
-                  ) : (
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400">
-                      Demo privada
-                      <i className="fa-solid fa-lock text-xs" />
-                    </span>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {hasLink && (
+                      <a
+                        href={project.link}
+                        target={isExternalLink ? '_blank' : undefined}
+                        rel={isExternalLink ? 'noreferrer' : undefined}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-500"
+                      >
+                        Ver demo
+                        <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
+                      </a>
+                    )}
+                    {project.repo && (
+                      <a
+                        href={project.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"
+                      >
+                        Código
+                        <i className="fa-brands fa-github text-xs" />
+                      </a>
+                    )}
+                    {!hasLink && !project.repo && (
+                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400">
+                        Demo privada
+                        <i className="fa-solid fa-lock text-xs" />
+                      </span>
+                    )}
+                  </div>
                 </div>
               </article>
               </SwiperSlide>
