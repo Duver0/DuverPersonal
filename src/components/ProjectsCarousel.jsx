@@ -71,7 +71,7 @@ const ProjectsCarousel = () => {
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
                   {project.description && (
-                    <p className="absolute bottom-10 left-4 right-4 line-clamp-2 text-xs text-white/90 drop-shadow">
+                    <p className="absolute bottom-10 left-4 right-4 line-clamp-2 text-xs text-white/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.9)]">
                       {project.description.length > 120
                         ? project.description.slice(0, 120) + '…'
                         : project.description}
