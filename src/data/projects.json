@@ -63,6 +63,67 @@
     "featured": false
   },
   {
+    "title": "Design Patterns",
+    "description": "Design Patterns Quiz – Aprendizaje Interactivo. Plataforma estática de aprendizaje para dominar los patrones de diseño (GoF) mediante un sistema de quiz con retroalimentación inmediata.",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://duver0.github.io/design-patterns/",
+    "repo": "https://github.com/Duver0/design-patterns",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Natillera",
+    "description": "Aplicación móvil para gestionar una natillera / fondo rotatorio:",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://natillera-nu.vercel.app",
+    "repo": "https://github.com/Duver0/Natillera",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnatillera-nu.vercel.app?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Generador De Historias Interactivas",
+    "description": "permite a la gente construir relatos colaborativos en tiempo real",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Generador-de-historias-interactivas",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FGenerador-de-historias-interactivas?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Preguntas Y Respuestas",
+    "description": "Aplicación de preguntas y respuestas construida con React, Vite, Tailwind CSS y Bun, lista para desplegarse gratis como sitio estático. Incluye preguntas curadas de desarrollo web, rachas con bonus, historial detallado y un ranking persistido en localStorage.",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/Preguntas-y-Respuestas/",
+    "repo": "https://github.com/Duver0/Preguntas-y-Respuestas",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "Damage Estimator",
     "description": "Sistema de cotización de seguros de daños. Permite crear folios, capturar ubicaciones de riesgo, calcular prima neta/comercial y visualizar resultados.",
     "stack": [
@@ -76,21 +137,6 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fdamage-estimator?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
-  },
-  {
-    "title": "Design Patterns",
-    "description": "Design Patterns Quiz – Aprendizaje Interactivo. Plataforma estática de aprendizaje para dominar los patrones de diseño (GoF) mediante un sistema de quiz con retroalimentación inmediata.",
-    "stack": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
-    "link": "https://duver0.github.io/design-patterns/",
-    "repo": "https://github.com/Duver0/design-patterns",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
     "featured": false
   },
   {
@@ -173,52 +219,6 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FSerenity-BDD?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
-  },
-  {
-    "title": "Natillera",
-    "description": "Aplicación móvil para gestionar una natillera / fondo rotatorio:",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://natillera-nu.vercel.app",
-    "repo": "https://github.com/Duver0/Natillera",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnatillera-nu.vercel.app?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "Generador De Historias Interactivas",
-    "description": "permite a la gente construir relatos colaborativos en tiempo real",
-    "stack": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
-    "link": null,
-    "repo": "https://github.com/Duver0/Generador-de-historias-interactivas",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FGenerador-de-historias-interactivas?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "Preguntas Y Respuestas",
-    "description": "Aplicación de preguntas y respuestas construida con React, Vite, Tailwind CSS y Bun, lista para desplegarse gratis como sitio estático. Incluye preguntas curadas de desarrollo web, rachas con bonus, historial detallado y un ranking persistido en localStorage.",
-    "stack": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://duver0.github.io/Preguntas-y-Respuestas/",
-    "repo": "https://github.com/Duver0/Preguntas-y-Respuestas",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
     "featured": false
   }
 ]

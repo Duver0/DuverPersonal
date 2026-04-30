@@ -69,7 +69,14 @@ const ProjectsCarousel = () => {
                     alt={`Proyecto ${project.title}`}
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+                  {project.description && (
+                    <p className="absolute bottom-10 left-4 right-4 line-clamp-2 text-xs text-white/90 drop-shadow">
+                      {project.description.length > 120
+                        ? project.description.slice(0, 120) + '…'
+                        : project.description}
+                    </p>
+                  )}
                   <span className="absolute bottom-4 left-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                     {project.metric}
                   </span>

@@ -70,8 +70,9 @@ async function main() {
   );
 
   const featured = projects.filter((p) => p.featured);
-  const rest = projects.filter((p) => !p.featured);
-  const sorted = [...featured, ...rest];
+  const withPages = projects.filter((p) => !p.featured && p.kind === 'pages');
+  const withoutPages = projects.filter((p) => !p.featured && p.kind !== 'pages');
+  const sorted = [...featured, ...withPages, ...withoutPages];
 
   mkdirSync('src/data', { recursive: true });
   writeFileSync(OUTPUT_PATH, JSON.stringify(sorted, null, 2));
