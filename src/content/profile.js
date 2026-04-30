@@ -1,6 +1,6 @@
 import profilePhoto from '../assets/img/ProfilePhoto.png';
-import defaultProjectImage from '../assets/img/default.jpg';
 import cvPdf from '../assets/pdf/DuverBetancurCV.pdf';
+import projectsData from '../data/projects.json';
 
 export const EXPERIENCE_START_YEAR = 2019;
 
@@ -121,77 +121,4 @@ export const EXPERIENCE = [
   },
 ];
 
-export const PROJECTS = [
-  {
-    title: 'Sistema de Turnos Médicos',
-    problem: 'Gestionar turnos médicos en tiempo real requiere desacoplar registro, asignación y notificación.',
-    solution: 'Arquitectura event-driven con NestJS + Next.js + RabbitMQ + MongoDB, notificaciones por WebSocket.',
-    impact: 'Flujo asíncrono 202 Accepted; asignación automática de consultorios con scheduler dedicado.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FIA_P1/?w=1200',
-    stack: ['NestJS', 'Next.js', 'RabbitMQ', 'MongoDB'],
-    link: null,
-    repo: 'https://github.com/Duver0/IA_P1',
-    metric: 'Microservicios · Event-driven',
-    kind: 'repo',
-  },
-  {
-    title: 'Design Patterns Quiz',
-    problem: 'Aprender los 23 patrones GoF con teoría plana no fija el conocimiento.',
-    solution: 'Plataforma de quiz 100% estática con Strategy + Factory + Singleton y retroalimentación inmediata.',
-    impact: '880+ preguntas curadas (40 por patrón) en 3 categorías; arquitectura que enseña patrones usándolos.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns/?w=1200',
-    stack: ['Vite', 'JS Modules', 'HTML5', 'CSS3'],
-    link: 'https://duver0.github.io/design-patterns/',
-    repo: 'https://github.com/Duver0/design-patterns',
-    metric: '23 patrones · 880+ preguntas',
-    kind: 'pages',
-  },
-  {
-    title: 'Generador de historias interactivas',
-    problem: 'Los talleres de narrativa colaborativa requerían coordinación manual por chat.',
-    solution: 'Full stack con React + Express + Socket.IO para salas en vivo tipo "cadáver exquisito".',
-    impact: 'Sincronización en tiempo real de participantes, segmentos y turnos; soporte para modo oscuro persistente.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FGenerador-de-historias-interactivas/?w=1200',
-    stack: ['React', 'Express', 'Socket.IO', 'Vite'],
-    link: 'https://duver0.github.io/Generador-de-historias-interactivas/',
-    repo: 'https://github.com/Duver0/Generador-de-historias-interactivas',
-    metric: 'Websockets en vivo',
-    kind: 'pages',
-  },
-  {
-    title: 'Anthropic Skilljar Tracker',
-    problem: 'Seguimiento manual de certificados de Anthropic Skilljar era tedioso y difícil de compartir.',
-    solution: 'SPA estática con Astro + Tailwind v4 que scrapea credenciales con Playwright y las publica automáticamente.',
-    impact: 'Deploy semanal automático vía GitHub Actions; credenciales siempre al día sin intervención.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAnthropicCertifications/?w=1200',
-    stack: ['Astro', 'Tailwind v4', 'Playwright', 'Bun'],
-    link: 'https://duver0.github.io/Anthropic-certifications/',
-    repo: 'https://github.com/Duver0/Anthropic-certifications',
-    metric: 'Auto-scrape semanal',
-    kind: 'pages',
-  },
-  {
-    title: 'Preguntas y Respuestas',
-    problem: 'Necesitaba un quiz de dev web con rachas, ranking y explicaciones para reforzar aprendizaje.',
-    solution: 'SPA React + Vite + Tailwind con engine propio (useQuizEngine), bonus por racha y highscores persistentes.',
-    impact: '30+ preguntas categorizadas; historial detallado y ranking en localStorage sin backend.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas/?w=1200',
-    stack: ['React', 'Vite', 'Tailwind', 'Bun'],
-    link: 'https://duver0.github.io/Preguntas-y-Respuestas/',
-    repo: 'https://github.com/Duver0/Preguntas-y-Respuestas',
-    metric: 'Streak engine · localStorage',
-    kind: 'pages',
-  },
-  {
-    title: 'Natillera App',
-    problem: 'Administrar fondos rotatorios (natilleras) familiares implica ahorros, créditos e intereses offline.',
-    solution: 'App móvil React Native + Expo con SQLite local, contexto de auth y navegación por tabs.',
-    impact: 'Funciona sin conexión; cada usuario gestiona sus propios clientes, cuotas e intereses.',
-    image: defaultProjectImage,
-    stack: ['React Native', 'Expo', 'SQLite', 'Bun'],
-    link: null,
-    repo: 'https://github.com/Duver0/Natillera',
-    metric: 'Offline-first · SQLite',
-    kind: 'repo',
-  },
-];
+export const PROJECTS = projectsData;
