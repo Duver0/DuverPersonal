@@ -1,0 +1,224 @@
+[
+  {
+    "title": "Anthropic Certifications",
+    "description": "Anthropic Skilljar Certificate Tracker A static single-page application that displays all Anthropic Skilljar certificates. Built with Astro, Tailwind CSS v4, and Playwright — powered by Bun.",
+    "stack": [
+      "TypeScript",
+      "Astro",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://duver0.github.io/Anthropic-certifications/",
+    "repo": "https://github.com/Duver0/Anthropic-certifications",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAnthropic-certifications%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": true
+  },
+  {
+    "title": "Auto Nomina",
+    "description": "Automatización para descargar comprobantes de nómina del portal PSP de la Policía Nacional de Colombia.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "TypeScript",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/Auto-nomina/",
+    "repo": "https://github.com/Duver0/Auto-nomina",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAuto-nomina%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Natillera Pwa",
+    "description": "",
+    "stack": [
+      "Python",
+      "TypeScript",
+      "PLpgSQL",
+      "JavaScript"
+    ],
+    "link": "https://duver0.github.io/natillera-pwa/",
+    "repo": "https://github.com/Duver0/natillera-pwa",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fnatillera-pwa%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "DuverPersonal",
+    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/DuverPersonal/",
+    "repo": "https://github.com/Duver0/DuverPersonal",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Damage Estimator",
+    "description": "Sistema de cotización de seguros de daños. Permite crear folios, capturar ubicaciones de riesgo, calcular prima neta/comercial y visualizar resultados.",
+    "stack": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "CSS"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/damage-estimator",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fdamage-estimator?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "Design Patterns",
+    "description": "Design Patterns Quiz – Aprendizaje Interactivo. Plataforma estática de aprendizaje para dominar los patrones de diseño (GoF) mediante un sistema de quiz con retroalimentación inmediata.",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://duver0.github.io/design-patterns/",
+    "repo": "https://github.com/Duver0/design-patterns",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "AUTO FRONT POM FACTORY",
+    "description": "POM + Page Factory Sobre una aplicación propia construida en fases anteriores. (2 escenarios independientes: al menos 1 flujo positivo y 1 flujo negativo)",
+    "stack": [
+      "Java",
+      "Gherkin"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/AUTO_FRONT_POM_FACTORY",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAUTO_FRONT_POM_FACTORY?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "IA P1",
+    "description": "Sistema de Turnos Médicos en Tiempo Real Sistema para gestionar turnos médicos en tiempo real usando microservicios, mensajería asíncrona y WebSockets.",
+    "stack": [
+      "TypeScript",
+      "CSS",
+      "Gherkin",
+      "Dockerfile"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/IA_P1",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FIA_P1?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "AUTO FRONT SCREENPLAY",
+    "description": "Screenplay Sobre una aplicación propia construida en fases anteriores. (2 escenarios nuevos diferentes a los de POM: al menos 1 flujo positivo y 1 flujo negativo)",
+    "stack": [
+      "Java",
+      "Gherkin"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/AUTO_FRONT_SCREENPLAY",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAUTO_FRONT_SCREENPLAY?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "AUTO API SCREENPLAY",
+    "description": "Screenplay (Rest) Sobre una api propia construida en fases anteriores (1 escenario que incluya 4 verbos)",
+    "stack": [
+      "Java",
+      "Gherkin"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/AUTO_API_SCREENPLAY",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAUTO_API_SCREENPLAY?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "Smart Design",
+    "description": "",
+    "stack": [],
+    "link": null,
+    "repo": "https://github.com/Duver0/Smart-Design",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FSmart-Design?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "Serenity BDD",
+    "description": "",
+    "stack": [
+      "Java"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Serenity-BDD",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FSerenity-BDD?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "Natillera",
+    "description": "Aplicación móvil para gestionar una natillera / fondo rotatorio:",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://natillera-nu.vercel.app",
+    "repo": "https://github.com/Duver0/Natillera",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnatillera-nu.vercel.app?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Generador De Historias Interactivas",
+    "description": "permite a la gente construir relatos colaborativos en tiempo real",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Generador-de-historias-interactivas",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FGenerador-de-historias-interactivas?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Preguntas Y Respuestas",
+    "description": "Aplicación de preguntas y respuestas construida con React, Vite, Tailwind CSS y Bun, lista para desplegarse gratis como sitio estático. Incluye preguntas curadas de desarrollo web, rachas con bonus, historial detallado y un ranking persistido en localStorage.",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/Preguntas-y-Respuestas/",
+    "repo": "https://github.com/Duver0/Preguntas-y-Respuestas",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  }
+]
