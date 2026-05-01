@@ -32,22 +32,6 @@
     "featured": false
   },
   {
-    "title": "Natillera Pwa",
-    "description": "",
-    "stack": [
-      "Python",
-      "TypeScript",
-      "PLpgSQL",
-      "JavaScript"
-    ],
-    "link": "https://duver0.github.io/natillera-pwa/",
-    "repo": "https://github.com/Duver0/natillera-pwa",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fnatillera-pwa%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
@@ -58,6 +42,22 @@
     "link": "https://duver0.github.io/DuverPersonal/",
     "repo": "https://github.com/Duver0/DuverPersonal",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Natillera Pwa",
+    "description": "Aplicación PWA multi-tenant para gestión de créditos, clientes y pagos de natillera.",
+    "stack": [
+      "Python",
+      "TypeScript",
+      "PLpgSQL",
+      "JavaScript"
+    ],
+    "link": "https://duver0.github.io/natillera-pwa/",
+    "repo": "https://github.com/Duver0/natillera-pwa",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fnatillera-pwa%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
@@ -78,21 +78,6 @@
     "featured": false
   },
   {
-    "title": "Natillera",
-    "description": "Aplicación móvil para gestionar una natillera / fondo rotatorio:",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://natillera-nu.vercel.app",
-    "repo": "https://github.com/Duver0/Natillera",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnatillera-nu.vercel.app?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
     "title": "Generador De Historias Interactivas",
     "description": "permite a la gente construir relatos colaborativos en tiempo real",
     "stack": [
@@ -100,9 +85,9 @@
       "CSS",
       "HTML"
     ],
-    "link": null,
+    "link": "https://duver0.github.io/Generador-de-historias-interactivas/",
     "repo": "https://github.com/Duver0/Generador-de-historias-interactivas",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FGenerador-de-historias-interactivas?w=1200",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FGenerador-de-historias-interactivas%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
@@ -198,19 +183,8 @@
     "featured": false
   },
   {
-    "title": "Smart Design",
-    "description": "",
-    "stack": [],
-    "link": null,
-    "repo": "https://github.com/Duver0/Smart-Design",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FSmart-Design?w=1200",
-    "kind": "repo",
-    "metric": "GitHub",
-    "featured": false
-  },
-  {
     "title": "Serenity BDD",
-    "description": "",
+    "description": "Ejercicio de ejemplo para mostrar una automatización web básica con Serenity BDD + Gradle + JUnit 4 sobre OpenCart.  Su propósito es evidenciar, de forma simple, la estructura del proyecto, la configuración en serenity.conf, la ejecución por Gradle y el Reporte Vivo de Serenity con capturas.",
     "stack": [
       "Java"
     ],
