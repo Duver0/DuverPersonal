@@ -109,6 +109,22 @@
     "featured": false
   },
   {
+    "title": "Mp3 Downloader",
+    "description": "",
+    "stack": [
+      "Python",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/mp3-downloader",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fmp3-downloader?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
     "title": "Damage Estimator",
     "description": "Sistema de cotización de seguros de daños. Permite crear folios, capturar ubicaciones de riesgo, calcular prima neta/comercial y visualizar resultados.",
     "stack": [
