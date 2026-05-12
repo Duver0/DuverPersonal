@@ -16,6 +16,22 @@
     "featured": true
   },
   {
+    "title": "Auto Nomina",
+    "description": "Automatización para descargar comprobantes de nómina del portal PSP de la Policía Nacional de Colombia.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "TypeScript",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/Auto-nomina/",
+    "repo": "https://github.com/Duver0/Auto-nomina",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAuto-nomina%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
@@ -42,22 +58,6 @@
     "link": "https://duver0.github.io/natillera-pwa/",
     "repo": "https://github.com/Duver0/natillera-pwa",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fnatillera-pwa%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "Auto Nomina",
-    "description": "Automatización para descargar comprobantes de nómina del portal PSP de la Policía Nacional de Colombia.",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "TypeScript",
-      "CSS"
-    ],
-    "link": "https://duver0.github.io/Auto-nomina/",
-    "repo": "https://github.com/Duver0/Auto-nomina",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAuto-nomina%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
