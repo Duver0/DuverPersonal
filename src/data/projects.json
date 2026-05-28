@@ -16,6 +16,22 @@
     "featured": true
   },
   {
+    "title": "Ambient Music Player",
+    "description": "",
+    "stack": [
+      "TypeScript",
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Ambient-Music-Player",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAmbient-Music-Player?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
@@ -58,6 +74,21 @@
     "link": "https://duver0.github.io/natillera-pwa/",
     "repo": "https://github.com/Duver0/natillera-pwa",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fnatillera-pwa%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Mayerli Portfolio",
+    "description": "",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Mayerli-Portfolio",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FMayerli-Portfolio?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
@@ -106,6 +137,22 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
+    "title": "Scalable Notification Service API",
+    "description": "",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Scalable-Notification-Service-API",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FScalable-Notification-Service-API?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
     "featured": false
   },
   {
