@@ -17,16 +17,16 @@
   },
   {
     "title": "Ambient Music Player",
-    "description": "",
+    "description": "Ambient Music Player + Focus Experience — A cinematic offline-first PWA for Android and iOS focused on immersive local audio playback, premium motion design, ambient visuals, and distraction-free focus sessions. Built with Bun, React, TypeScript, and modern mobile-first architecture.",
     "stack": [
       "TypeScript",
       "CSS",
       "HTML",
       "JavaScript"
     ],
-    "link": null,
+    "link": "https://duver0.github.io/Ambient-Music-Player/",
     "repo": "https://github.com/Duver0/Ambient-Music-Player",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAmbient-Music-Player?w=1200",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAmbient-Music-Player%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
@@ -141,7 +141,7 @@
   },
   {
     "title": "Scalable Notification Service API",
-    "description": "",
+    "description": "Scalable Notification Service API — A modular and scalable notification delivery service designed for high-throughput event-driven systems, supporting multi-channel messaging, queue-based processing, retry strategies, and extensible delivery providers with a clean backend architecture.",
     "stack": [
       "TypeScript",
       "JavaScript",
@@ -157,7 +157,7 @@
   },
   {
     "title": "Mp3 Downloader",
-    "description": "",
+    "description": "Turn Spotify tracks into fully tagged MP3 files with artist, album, title, and embedded cover artwork for a seamless offline listening experience.",
     "stack": [
       "Python",
       "HTML",
@@ -173,7 +173,7 @@
   },
   {
     "title": "Turnos App",
-    "description": "",
+    "description": "A modern scheduling platform that syncs with Google Calendar to manage appointments, availability, and automated booking workflows in real time.",
     "stack": [
       "TypeScript",
       "JavaScript"
