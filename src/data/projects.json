@@ -16,6 +16,21 @@
     "featured": true
   },
   {
+    "title": "DuverPersonal",
+    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/DuverPersonal/",
+    "repo": "https://github.com/Duver0/DuverPersonal",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "Ambient Music Player",
     "description": "Ambient Music Player + Focus Experience — A cinematic offline-first PWA for Android and iOS focused on immersive local audio playback, premium motion design, ambient visuals, and distraction-free focus sessions. Built with Bun, React, TypeScript, and modern mobile-first architecture.",
     "stack": [
@@ -27,21 +42,6 @@
     "link": "https://duver0.github.io/Ambient-Music-Player/",
     "repo": "https://github.com/Duver0/Ambient-Music-Player",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAmbient-Music-Player%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "DuverPersonal",
-    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://duver0.github.io/DuverPersonal/",
-    "repo": "https://github.com/Duver0/DuverPersonal",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
