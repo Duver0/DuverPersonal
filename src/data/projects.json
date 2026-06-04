@@ -16,6 +16,21 @@
     "featured": true
   },
   {
+    "title": "Calendar Test",
+    "description": "",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/calendar-test/",
+    "repo": "https://github.com/Duver0/calendar-test",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fcalendar-test%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
@@ -140,22 +155,6 @@
     "featured": false
   },
   {
-    "title": "Scalable Notification Service API",
-    "description": "Scalable Notification Service API — A modular and scalable notification delivery service designed for high-throughput event-driven systems, supporting multi-channel messaging, queue-based processing, retry strategies, and extensible delivery providers with a clean backend architecture.",
-    "stack": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": null,
-    "repo": "https://github.com/Duver0/Scalable-Notification-Service-API",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FScalable-Notification-Service-API?w=1200",
-    "kind": "repo",
-    "metric": "GitHub",
-    "featured": false
-  },
-  {
     "title": "Mp3 Downloader",
     "description": "Turn Spotify tracks into fully tagged MP3 files with artist, album, title, and embedded cover artwork for a seamless offline listening experience.",
     "stack": [
@@ -167,6 +166,33 @@
     "link": null,
     "repo": "https://github.com/Duver0/mp3-downloader",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fmp3-downloader?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "Prompts Constructor",
+    "description": "Visual prompt engineering platform for building, organizing, and exporting structured AI prompts using reusable blocks, templates, constraints, and output formats.",
+    "stack": [],
+    "link": null,
+    "repo": "https://github.com/Duver0/prompts-constructor",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fprompts-constructor?w=1200",
+    "kind": "repo",
+    "metric": "GitHub",
+    "featured": false
+  },
+  {
+    "title": "Scalable Notification Service API",
+    "description": "Scalable Notification Service API — A modular and scalable notification delivery service designed for high-throughput event-driven systems, supporting multi-channel messaging, queue-based processing, retry strategies, and extensible delivery providers with a clean backend architecture.",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": null,
+    "repo": "https://github.com/Duver0/Scalable-Notification-Service-API",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FScalable-Notification-Service-API?w=1200",
     "kind": "repo",
     "metric": "GitHub",
     "featured": false
