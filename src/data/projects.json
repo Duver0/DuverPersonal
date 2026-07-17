@@ -16,6 +16,21 @@
     "featured": true
   },
   {
+    "title": "Design Patterns",
+    "description": "Design Patterns Quiz – Aprendizaje Interactivo. Plataforma estática de aprendizaje para dominar los patrones de diseño (GoF) mediante un sistema de quiz con retroalimentación inmediata.",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://duver0.github.io/design-patterns/",
+    "repo": "https://github.com/Duver0/design-patterns",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
@@ -104,21 +119,6 @@
     "link": null,
     "repo": "https://github.com/Duver0/Mayerli-Portfolio",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FMayerli-Portfolio?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "Design Patterns",
-    "description": "Design Patterns Quiz – Aprendizaje Interactivo. Plataforma estática de aprendizaje para dominar los patrones de diseño (GoF) mediante un sistema de quiz con retroalimentación inmediata.",
-    "stack": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
-    "link": "https://duver0.github.io/design-patterns/",
-    "repo": "https://github.com/Duver0/design-patterns",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
