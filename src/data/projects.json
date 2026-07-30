@@ -16,6 +16,21 @@
     "featured": true
   },
   {
+    "title": "Photo Group",
+    "description": "Web app: Google OAuth login, generate QR code for photo sharing, images stored in Google Drive folders by date. Built with Next.js 16, Bun, NextAuth v5, Google Drive API v3, Tailwind CSS v4. Deployed on Vercel.",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://photo-group-flame.vercel.app",
+    "repo": "https://github.com/Duver0/photo-group",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fphoto-group-flame.vercel.app?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
