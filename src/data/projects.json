@@ -16,6 +16,22 @@
     "featured": true
   },
   {
+    "title": "Fit App",
+    "description": "Plataforma de ranking de gimnasio. Usuarios crean grupos, registran su progreso en ejercicios y compiten en rankings con sistema de disputas por mayoría simple.",
+    "stack": [
+      "TypeScript",
+      "JavaScript",
+      "Shell",
+      "Dockerfile"
+    ],
+    "link": "https://duver0.github.io/fit-app/",
+    "repo": "https://github.com/Duver0/fit-app",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Ffit-app%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "DuverPersonal",
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
