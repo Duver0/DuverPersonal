@@ -39,7 +39,13 @@ void main(){
   // Caída tipo gaussiana: borde muy difuminado (sin corte duro) alrededor del cursor.
   float sigma = revealRadius * 0.5;
   float reveal = exp(-(dist * dist) / (2.0 * sigma * sigma)) * uHover;
-  float grid = dotGrid + lineGrid * reveal;
+  // Modo oscuro: sin líneas; al pasar el mouse los puntos de intersección crecen de tamaño.
+  float lwDot = mix(lwCell, 0.03, reveal * uIsDark);
+  vec2 linesDot = 1.0 - smoothstep(lwDot - aa, lwDot + aa, edge);
+  float dotBig = linesDot.x * linesDot.y;
+  float gridLight = dotGrid + lineGrid * reveal;   // claro: puntos + líneas en hover
+  float gridDark = mix(dotGrid, dotBig, reveal);    // oscuro: solo puntos que crecen en hover
+  float grid = mix(gridLight, gridDark, uIsDark);
   // Percepción de profundidad 3D:
   // - el fondo del pozo se atenúa levemente (sombra interior)
   // - el borde de la depresión capta luz (realce en el rim)
