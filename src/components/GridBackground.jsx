@@ -21,14 +21,14 @@ void main(){
   float radius = 0.22;
   // Dip cóncavo: las celdas se comprimen hacia el cursor (hundimiento, no bulbo).
   // Al reducir la distancia efectiva al centro, el grid se "arrastra" hacia adentro.
-  float dip = (1.0 - smoothstep(0.0, radius, dist)) * uHover;
+  float dip = 0.0; // deformación circular desactivada: solo revelado de líneas cerca del cursor
   float warpedDist = dist * (1.0 - dip * 0.5);
   float scale = 44.0;
   vec2 coord = (m + dir * warpedDist) * scale;
   vec2 gv = abs(fract(coord) - 0.5);
   vec2 edge = 0.5 - gv;
-  float lwCell = 0.001;
-  vec2 aa = fwidth(coord) * 0.1;
+  float lwCell = 0.01;
+  vec2 aa = fwidth(coord) * 0.0001;
   vec2 lines = 1.0 - smoothstep(lwCell - aa, lwCell + aa, edge);
   // Por defecto solo puntos de intersección (sin líneas). Al hacer hover, las líneas
   // solo se revelan en un círculo alrededor del cursor (no en todo el grid).
