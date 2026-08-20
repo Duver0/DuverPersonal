@@ -16,17 +16,17 @@
     "featured": true
   },
   {
-    "title": "Auto Nomina",
-    "description": "Automatización para descargar comprobantes de nómina del portal PSP de la Policía Nacional de Colombia.",
+    "title": "Fit App",
+    "description": "Plataforma de ranking de gimnasio. Usuarios crean grupos, registran su progreso en ejercicios y compiten en rankings con sistema de disputas por mayoría simple.",
     "stack": [
-      "HTML",
+      "TypeScript",
       "JavaScript",
-      "CSS",
-      "TypeScript"
+      "Shell",
+      "Dockerfile"
     ],
-    "link": "https://duver0.github.io/Auto-nomina/",
-    "repo": "https://github.com/Duver0/Auto-nomina",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAuto-nomina%2F?w=1200",
+    "link": "https://duver0.github.io/fit-app/",
+    "repo": "https://github.com/Duver0/fit-app",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Ffit-app%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
@@ -47,6 +47,22 @@
     "featured": false
   },
   {
+    "title": "Auto Nomina",
+    "description": "Automatización para descargar comprobantes de nómina del portal PSP de la Policía Nacional de Colombia.",
+    "stack": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "TypeScript"
+    ],
+    "link": "https://duver0.github.io/Auto-nomina/",
+    "repo": "https://github.com/Duver0/Auto-nomina",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAuto-nomina%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false
+  },
+  {
     "title": "Ticketera",
     "description": "Sistema de gestión de tickets tipo **Jira** para soporte y desarrollo. Permite crear, asignar y seguir tickets con un tablero **Kanban**, comentarios, historial de cambios y reportes",
     "stack": [
@@ -57,22 +73,6 @@
     "link": "https://ticketera-sigma.vercel.app",
     "repo": "https://github.com/Duver0/ticketera",
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fticketera-sigma.vercel.app?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "Fit App",
-    "description": "Plataforma de ranking de gimnasio. Usuarios crean grupos, registran su progreso en ejercicios y compiten en rankings con sistema de disputas por mayoría simple.",
-    "stack": [
-      "TypeScript",
-      "JavaScript",
-      "Shell",
-      "Dockerfile"
-    ],
-    "link": "https://duver0.github.io/fit-app/",
-    "repo": "https://github.com/Duver0/fit-app",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Ffit-app%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false
