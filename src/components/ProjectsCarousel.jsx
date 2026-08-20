@@ -1,140 +1,140 @@
-import { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { useState } from 'react';
 import { PROJECTS } from '../content/profile.js';
+import Reveal from './Reveal.jsx';
+import { useCardMotion } from '../hooks/useCardMotion.js';
 
-const ProjectsCarousel = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const [navReady, setNavReady] = useState(false);
+const ORDERED = [...PROJECTS].sort(
+  (a, b) => new Date(b.pushed_at || 0) - new Date(a.pushed_at || 0),
+);
+
+const INITIAL = 6;
+const STEP = 3;
+
+const ProjectCard = ({ project }) => {
+  const hasLink = typeof project.link === 'string' && project.link.trim().length > 0;
+  const isExternalLink = hasLink && project.link.startsWith('http');
+  const fx = useCardMotion(0);
 
   return (
-    <section id="projects" className="rounded-3xl border border-slate-100 bg-white/90 p-8 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/40">
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-500">Proyectos</p>
-          <h2 className="mt-3 text-3xl font-heading">Casos recientes</h2>
-        </div>
-        <div className="flex items-center gap-3">
-          <button
-            ref={prevRef}
-            type="button"
-            className="projects-prev inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 dark:border-slate-700 dark:bg-slate-900 sm:h-12 sm:w-12"
-          >
-            <i className="fa-solid fa-arrow-left" />
-          </button>
-          <button
-            ref={nextRef}
-            type="button"
-            className="projects-next inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 dark:border-slate-700 dark:bg-slate-900 sm:h-12 sm:w-12"
-          >
-            <i className="fa-solid fa-arrow-right" />
-          </button>
-        </div>
-      </div>
-      <div className="relative mt-8">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={28}
-          slidesPerView={1.05}
-          centeredSlides={false}
-          loop
-          autoplay={{ delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-          breakpoints={{
-            500: { slidesPerView: 1.15 },
-            768: { slidesPerView: 1.4 },
-            1024: { slidesPerView: 1.7 },
-            1280: { slidesPerView: 2 },
+    <Reveal variant="zoom-in">
+      <article
+        ref={fx.ref}
+        onMouseMove={fx.onMove}
+        onMouseLeave={fx.onLeave}
+        className="group relative flex h-full flex-col rounded-3xl border border-slate-100 bg-gradient-to-b from-white/80 to-slate-100/70 p-6 shadow-lg shadow-slate-900/5 transition duration-500 hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:from-slate-900/80 dark:to-slate-900/40"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            background:
+              'radial-gradient(300px circle at var(--x,50%) var(--y,50%), rgba(99,102,241,0.16), transparent 70%)',
           }}
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-            setNavReady(true);
-          }}
-          navigation={navReady ? { prevEl: prevRef.current, nextEl: nextRef.current } : undefined}
-          pagination={{ el: '.projects-pagination', clickable: true }}
-        >
-          {PROJECTS.map((project) => {
-            const hasLink = typeof project.link === 'string' && project.link.trim().length > 0;
-            const isExternalLink = hasLink && project.link.startsWith('http');
+          aria-hidden="true"
+        />
+        <div className="relative overflow-hidden rounded-3xl">
+          <img
+            src={project.image}
+            alt={`Proyecto ${project.title}`}
+            className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+          {project.description && (
+            <p className="absolute bottom-10 left-4 right-4 line-clamp-2 text-xs text-white/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.9)]">
+              {project.description.length > 120
+                ? project.description.slice(0, 120) + '…'
+                : project.description}
+            </p>
+          )}
+          <span className="absolute bottom-4 left-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+            {project.metric}
+          </span>
+        </div>
+        <div className="relative mt-6 flex flex-1 flex-col gap-4">
+          <div>
+            <h3 className="text-xl font-heading">{project.title}</h3>
+            <div className="mt-2 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              {project.problem && <p><span className="font-semibold">Problema:</span> {project.problem}</p>}
+              {project.solution && <p><span className="font-semibold">Solución:</span> {project.solution}</p>}
+              {project.impact && <p><span className="font-semibold">Impacto:</span> {project.impact}</p>}
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {project.stack.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full bg-slate-100/80 px-3 py-1 text-xs font-semibold dark:bg-slate-800/80"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="mt-auto flex items-center gap-2">
+            {hasLink && (
+              <a
+                href={project.link}
+                target={isExternalLink ? '_blank' : undefined}
+                rel={isExternalLink ? 'noreferrer' : undefined}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-500"
+              >
+                Ver demo
+                <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
+              </a>
+            )}
+            {project.repo && (
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"
+              >
+                Código
+                <i className="fa-brands fa-github text-xs" />
+              </a>
+            )}
+            {!hasLink && !project.repo && (
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400">
+                Demo privada
+                <i className="fa-solid fa-lock text-xs" />
+              </span>
+            )}
+          </div>
+        </div>
+      </article>
+    </Reveal>
+  );
+};
 
-            return (
-              <SwiperSlide key={project.title} className="pt-6">
-                <article className="group h-full min-h-[460px] rounded-3xl border border-slate-100 bg-gradient-to-b from-white to-slate-50 p-6 shadow-lg shadow-slate-900/5 transition duration-500 hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:from-slate-900 dark:to-slate-900/30">
-                  <div className="relative overflow-hidden rounded-3xl">
-                    <img
-                    src={project.image}
-                    alt={`Proyecto ${project.title}`}
-                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
-                  {project.description && (
-                    <p className="absolute bottom-10 left-4 right-4 line-clamp-2 text-xs text-white/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.9)]">
-                      {project.description.length > 120
-                        ? project.description.slice(0, 120) + '…'
-                        : project.description}
-                    </p>
-                  )}
-                  <span className="absolute bottom-4 left-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
-                    {project.metric}
-                  </span>
-                </div>
-                <div className="mt-6 flex flex-col gap-4">
-                  <div>
-                    <h3 className="text-xl font-heading">{project.title}</h3>
-                    <div className="mt-2 space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                      {project.problem && <p><span className="font-semibold">Problema:</span> {project.problem}</p>}
-                      {project.solution && <p><span className="font-semibold">Solución:</span> {project.solution}</p>}
-                      {project.impact && <p><span className="font-semibold">Impacto:</span> {project.impact}</p>}
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.stack.map((tech) => (
-                      <span key={tech} className="rounded-full bg-slate-100/80 px-3 py-1 text-xs font-semibold dark:bg-slate-800/80">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {hasLink && (
-                      <a
-                        href={project.link}
-                        target={isExternalLink ? '_blank' : undefined}
-                        rel={isExternalLink ? 'noreferrer' : undefined}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-500"
-                      >
-                        Ver demo
-                        <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
-                      </a>
-                    )}
-                    {project.repo && (
-                      <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"
-                      >
-                        Código
-                        <i className="fa-brands fa-github text-xs" />
-                      </a>
-                    )}
-                    {!hasLink && !project.repo && (
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400">
-                        Demo privada
-                        <i className="fa-solid fa-lock text-xs" />
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </article>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        <div className="projects-pagination mt-6" />
+const ProjectsCarousel = () => {
+  const [visible, setVisible] = useState(INITIAL);
+  const shown = ORDERED.slice(0, visible);
+  const hasMore = visible < ORDERED.length;
+
+  return (
+    <section id="projects" className="rounded-3xl border border-slate-100 bg-white/75 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/40">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-500">Proyectos</p>
+        <h2 className="mt-3 text-3xl font-heading">Casos recientes</h2>
+        <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+          Mostrando {shown.length} de {ORDERED.length} proyectos públicos en GitHub
+        </p>
       </div>
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {shown.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </div>
+      {hasMore && (
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisible((v) => v + STEP)}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-accent-600 px-8 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-400/40"
+          >
+            Cargar más
+            <i className="fa-solid fa-chevron-down text-xs" />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

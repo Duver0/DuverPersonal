@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "animation-orchestrator",
+  "agent": {
+    "animation-orchestrator": {
+      "description": "Agente principal del feature de animaciones/movimiento/fondos del portfolio. Coordina subagentes en paralelo.",
+      "mode": "primary"
+    },
+    "ux-motion-expert": {
+      "description": "UX y buenas prácticas de motion design.",
+      "mode": "subagent"
+    },
+    "animation-reviewer": {
+      "description": "Revisión de calidad de código de animaciones.",
+      "mode": "subagent"
+    },
+    "animation-evaluator": {
+      "description": "Evaluación de impacto y calidad de animaciones.",
+      "mode": "subagent"
+    },
+    "motion-perf-a11y": {
+      "description": "Rendimiento y accesibilidad del movimiento.",
+      "mode": "subagent"
+    }
+  }
+}

@@ -35,10 +35,20 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-12px)' },
         },
+        hue: {
+          '0%, 100%': { filter: 'hue-rotate(0deg)' },
+          '50%': { filter: 'hue-rotate(22deg)' },
+        },
+        'node-pulse': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.35)', opacity: '0.7' },
+        },
       },
       animation: {
         'float-slow': 'float 12s ease-in-out infinite',
         'float-fast': 'float 8s ease-in-out infinite',
+        'hue-slow': 'hue 26s ease-in-out infinite',
+        'node-pulse-slow': 'node-pulse 1.8s ease-in-out infinite',
       },
     },
   },

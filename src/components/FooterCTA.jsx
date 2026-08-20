@@ -1,8 +1,9 @@
 import Reveal from './Reveal.jsx';
+import MagneticLink from './MagneticLink.jsx';
 
 const FooterCTA = () => (
   <Reveal>
-    <section className="mt-6 rounded-3xl bg-gradient-to-r from-brand-600 to-purple-600 p-10 text-white shadow-glow">
+    <section id="contacto" className="mt-6 rounded-3xl bg-gradient-to-r from-brand-600 to-purple-600 p-10 text-white shadow-glow scroll-mt-24">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm uppercase tracking-[0.4em] text-white/70">¿Listo para crear?</p>
@@ -12,14 +13,14 @@ const FooterCTA = () => (
           </p>
         </div>
         <div className="flex flex-wrap gap-4">
-          <a
+          <MagneticLink
             href="mailto:duverbetancurbedoya@outlook.com"
             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-600"
           >
             <i className="fa-solid fa-calendar" />
             Reservar discovery call
-          </a>
-          <a
+          </MagneticLink>
+          <MagneticLink
             href="https://github.com/Duver0"
             target="_blank"
             rel="noreferrer"
@@ -27,7 +28,7 @@ const FooterCTA = () => (
           >
             <i className="fa-brands fa-github" />
             GitHub
-          </a>
+          </MagneticLink>
         </div>
       </div>
     </section>

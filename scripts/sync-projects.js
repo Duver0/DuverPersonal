@@ -65,6 +65,7 @@ async function main() {
         kind: hasPages ? 'pages' : 'repo',
         metric: hasPages ? 'GitHub Pages' : 'GitHub',
         featured: repo.name === FEATURED_REPO,
+        pushed_at: repo.pushed_at,
       };
     })
   );

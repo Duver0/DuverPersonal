@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 
-export const useReveal = (options = { threshold: 0.2 }) => {
+const DEFAULT_OPTIONS = { threshold: 0.2 };
+
+export const useReveal = (options = DEFAULT_OPTIONS) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+  const optsRef = useRef(options);
 
   useEffect(() => {
     const target = ref.current;
@@ -14,11 +17,11 @@ export const useReveal = (options = { threshold: 0.2 }) => {
         setVisible(true);
         observer.disconnect();
       }
-    }, options);
+    }, optsRef.current);
 
     observer.observe(target);
     return () => observer.disconnect();
-  }, [options]);
+  }, []);
 
   return { ref, visible };
 };

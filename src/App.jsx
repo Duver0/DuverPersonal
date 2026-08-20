@@ -1,5 +1,7 @@
 import GradientBackground from './components/GradientBackground.jsx';
+import GridBackground from './components/GridBackground.jsx';
 import ThemeToggle from './components/ThemeToggle.jsx';
+import SectionNav from './components/SectionNav.jsx';
 import Hero from './components/Hero.jsx';
 import StatsGrid from './components/StatsGrid.jsx';
 import SkillsColumn from './components/SkillsColumn.jsx';
@@ -13,10 +15,12 @@ const App = () => {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900 transition-colors duration-500 dark:bg-slate-950 dark:text-slate-100">
+    <div className="relative isolate min-h-screen overflow-hidden bg-slate-50 text-slate-900 transition-colors duration-500 dark:bg-slate-950 dark:text-slate-100">
       <GradientBackground />
+      <GridBackground />
+      <SectionNav />
       <div className="relative z-10">
-        <div className="container mx-auto max-w-6xl space-y-10 px-4 py-12 sm:px-6">
+        <div className="container mx-auto max-w-6xl space-y-10 px-4 py-12 sm:px-6 xl:pr-20">
           <Hero />
           <StatsGrid />
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
