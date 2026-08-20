@@ -27,10 +27,16 @@ void main(){
   vec2 coord = (m + dir * warpedDist) * scale;
   vec2 gv = abs(fract(coord) - 0.5);
   vec2 edge = 0.5 - gv;
-  float lwCell = 0.00001;
-  vec2 aa = fwidth(coord);
+  float lwCell = 0.001;
+  vec2 aa = fwidth(coord) * 0.1;
   vec2 lines = 1.0 - smoothstep(lwCell - aa, lwCell + aa, edge);
-  float grid = max(lines.x, lines.y);
+  // Por defecto solo puntos de intersección (sin líneas). Al hacer hover, las líneas
+  // solo se revelan en un círculo alrededor del cursor (no en todo el grid).
+  float dotGrid = lines.x * lines.y;
+  float lineGrid = max(lines.x, lines.y);
+  float revealRadius = 0.30;
+  float reveal = (1.0 - smoothstep(revealRadius * 0.4, revealRadius, dist)) * uHover;
+  float grid = mix(dotGrid, lineGrid, reveal);
   // Percepción de profundidad 3D:
   // - el fondo del pozo se atenúa levemente (sombra interior)
   // - el borde de la depresión capta luz (realce en el rim)
@@ -38,12 +44,12 @@ void main(){
   float rim = (1.0 - smoothstep(0.0, 0.045, abs(dist - radius * 0.6))) * dip * 0.55;
   float ring = (1.0 - smoothstep(0.0, 0.03, abs(dist - radius))) * uHover * 0.22;
   float infl = dip;
-  float glow = infl * 0.18 + rim + ring;
+  float glow = (infl * 0.18 + rim + ring) * 0.0;
   gl_FragColor = vec4(uColor, (uBaseA + glow) * grid * shade);
 }`;
 
-const colorFor = (dark) => (dark ? [0.55, 0.55, 0.58] : [0.45, 0.4, 0.88]);
-const baseAFor = (dark) => (dark ? 0.9 : 0.11);
+const colorFor = (dark) => (dark ? [1.0, 1.0, 1.0] : [0.545, 0.361, 0.965]);
+const baseAFor = (dark) => (dark ? 1 : 1);
 
 const GridBackground = () => {
   const canvasRef = useRef(null);
@@ -61,8 +67,8 @@ const GridBackground = () => {
         '[GridBackground] WebGL NO disponible (probablemente bloqueado por el entorno/navegador). Usando fallback CSS grid.',
       );
       const applyFallback = (dark) => {
-        const c = dark ? 'rgba(150,150,156,0.9)' : 'rgba(99,102,241,0.11)';
-        canvas.style.backgroundImage = `linear-gradient(${c} 1px, transparent 1px), linear-gradient(90deg, ${c} 1px, transparent 1px)`;
+        const col = dark ? 'rgba(255,255,255,0.5)' : 'rgba(139,92,246,0.5)';
+        canvas.style.backgroundImage = `radial-gradient(${col} 1.2px, transparent 1.4px)`;
         canvas.style.backgroundSize = '44px 44px';
       };
       applyFallback(document.documentElement.classList.contains('dark'));
