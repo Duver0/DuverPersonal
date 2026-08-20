@@ -35,7 +35,9 @@ void main(){
   float dotGrid = lines.x * lines.y;
   float lineGrid = max(lines.x, lines.y);
   float revealRadius = 0.24;
-  float reveal = (1.0 - smoothstep(revealRadius * 0.1, revealRadius, dist)) * uHover;
+  // Caída tipo gaussiana: borde muy difuminado (sin corte duro) alrededor del cursor.
+  float sigma = revealRadius * 0.5;
+  float reveal = exp(-(dist * dist) / (2.0 * sigma * sigma)) * uHover;
   float grid = dotGrid + lineGrid * reveal;
   // Percepción de profundidad 3D:
   // - el fondo del pozo se atenúa levemente (sombra interior)
