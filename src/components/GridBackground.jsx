@@ -43,7 +43,7 @@ void main(){
 }`;
 
 const colorFor = (dark) => (dark ? [0.55, 0.55, 0.58] : [0.45, 0.4, 0.88]);
-const baseAFor = (dark) => (dark ? 0.11 : 0.11);
+const baseAFor = (dark) => (dark ? 0.15 : 0.11);
 
 const GridBackground = () => {
   const canvasRef = useRef(null);
@@ -61,7 +61,7 @@ const GridBackground = () => {
         '[GridBackground] WebGL NO disponible (probablemente bloqueado por el entorno/navegador). Usando fallback CSS grid.',
       );
       const applyFallback = (dark) => {
-        const c = dark ? 'rgba(150,150,156,0.14)' : 'rgba(99,102,241,0.11)';
+        const c = dark ? 'rgba(150,150,156,0.20)' : 'rgba(99,102,241,0.11)';
         canvas.style.backgroundImage = `linear-gradient(${c} 1px, transparent 1px), linear-gradient(90deg, ${c} 1px, transparent 1px)`;
         canvas.style.backgroundSize = '44px 44px';
       };
@@ -131,6 +131,7 @@ const GridBackground = () => {
     let isDark = document.documentElement.classList.contains('dark');
     const themeObserver = new MutationObserver(() => {
       isDark = document.documentElement.classList.contains('dark');
+      draw();
     });
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
