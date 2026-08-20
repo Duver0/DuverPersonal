@@ -11,7 +11,7 @@ const SkillCard = ({ skill, delay }) => {
         ref={fx.ref}
         onMouseMove={fx.onMove}
         onMouseLeave={fx.onLeave}
-        className="group relative overflow-hidden rounded-3xl border border-white/60 bg-white/75 p-6 shadow-lg shadow-slate-900/5 backdrop-blur transition-transform duration-300 ease-out dark:border-slate-800/80 dark:bg-slate-900/40"
+        className="group relative overflow-hidden rounded-3xl border border-white/60 bg-white/80 p-6 shadow-lg shadow-slate-900/5 backdrop-blur-md transition-transform duration-300 ease-out dark:border-slate-800/80 dark:bg-gradient-to-b dark:from-slate-900/80 dark:to-slate-900/40"
       >
         <div
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
