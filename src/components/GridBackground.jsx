@@ -43,7 +43,7 @@ void main(){
 }`;
 
 const colorFor = (dark) => (dark ? [0.62, 0.55, 1.0] : [0.45, 0.4, 0.88]);
-const baseAFor = (dark) => (dark ? 0.06 : 0.08);
+const baseAFor = (dark) => (dark ? 0.06 : 0.11);
 
 const GridBackground = () => {
   const canvasRef = useRef(null);
@@ -62,9 +62,9 @@ const GridBackground = () => {
       );
       const dark = document.documentElement.classList.contains('dark');
       canvas.style.backgroundImage = `linear-gradient(${
-        dark ? 'rgba(165,180,252,0.10)' : 'rgba(99,102,241,0.08)'
+        dark ? 'rgba(165,180,252,0.10)' : 'rgba(99,102,241,0.11)'
       } 1px, transparent 1px), linear-gradient(90deg, ${
-        dark ? 'rgba(165,180,252,0.10)' : 'rgba(99,102,241,0.08)'
+        dark ? 'rgba(165,180,252,0.10)' : 'rgba(99,102,241,0.11)'
       } 1px, transparent 1px)`;
       canvas.style.backgroundSize = '44px 44px';
       return undefined;
@@ -114,7 +114,7 @@ const GridBackground = () => {
       draw();
     };
 
-    const mouse = { x: (window.innerWidth / 2) * dpr, y: (window.innerHeight / 2) * dpr };
+    const mouse = { x: 0.5, y: 0.5 };
     const target = { ...mouse };
     let hover = 0;
     let hoverTarget = 0;
@@ -131,7 +131,7 @@ const GridBackground = () => {
     const draw = () => {
       const col = colorFor(isDark);
       gl.uniform2f(uRes, canvas.width, canvas.height);
-      gl.uniform2f(uMouse, mouse.x, mouse.y);
+      gl.uniform2f(uMouse, mouse.x * canvas.width, mouse.y * canvas.height);
       gl.uniform1f(uHover, hover);
       gl.uniform1f(uBaseA, baseAFor(isDark));
       gl.uniform3f(uColor, col[0], col[1], col[2]);
@@ -140,8 +140,8 @@ const GridBackground = () => {
 
     const loop = () => {
       running = true;
-      mouse.x += (target.x - mouse.x) * 0.12;
-      mouse.y += (target.y - mouse.y) * 0.12;
+      mouse.x += (target.x - mouse.x) * 0.2;
+      mouse.y += (target.y - mouse.y) * 0.2;
       hover += (hoverTarget - hover) * 0.08;
       draw();
       if (hover > 0.002 || hoverTarget > 0) {
@@ -160,8 +160,8 @@ const GridBackground = () => {
     };
 
     const onMove = (e) => {
-      target.x = e.clientX * dpr;
-      target.y = (window.innerHeight - e.clientY) * dpr;
+      target.x = e.clientX / window.innerWidth;
+      target.y = (window.innerHeight - e.clientY) / window.innerHeight;
       hoverTarget = 1;
       start();
       clearTimeout(idleTimer);
@@ -173,6 +173,7 @@ const GridBackground = () => {
       hoverTarget = 0;
     };
 
+    resize();
     window.addEventListener('resize', resize);
     if (!reduced) {
       window.addEventListener('mousemove', onMove);
