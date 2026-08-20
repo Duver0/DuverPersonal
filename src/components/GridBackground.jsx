@@ -34,8 +34,8 @@ void main(){
   // solo se revelan en un círculo alrededor del cursor (no en todo el grid).
   float dotGrid = lines.x * lines.y;
   float lineGrid = max(lines.x, lines.y);
-  float revealRadius = 0.30;
-  float reveal = (1.0 - smoothstep(revealRadius * 0.4, revealRadius, dist)) * uHover;
+  float revealRadius = 0.24;
+  float reveal = (1.0 - smoothstep(revealRadius * 0.1, revealRadius, dist)) * uHover;
   float grid = mix(dotGrid, lineGrid, reveal);
   // Percepción de profundidad 3D:
   // - el fondo del pozo se atenúa levemente (sombra interior)
@@ -48,7 +48,7 @@ void main(){
   gl_FragColor = vec4(uColor, (uBaseA + glow) * grid * shade);
 }`;
 
-const colorFor = (dark) => (dark ? [1.0, 1.0, 1.0] : [0.545, 0.361, 0.965]);
+const colorFor = (dark) => (dark ? [0.545, 0.361, 0.965] : [0, 0, 0]);
 const baseAFor = (dark) => (dark ? 1 : 1);
 
 const GridBackground = () => {
