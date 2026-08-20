@@ -10,6 +10,7 @@ uniform vec2 uMouse;
 uniform float uHover;
 uniform float uBaseA;
 uniform vec3 uColor;
+uniform float uIsDark;
 void main(){
   vec2 uv = gl_FragCoord.xy / uResolution;
   float aspect = uResolution.x / uResolution.y;
@@ -34,7 +35,7 @@ void main(){
   // solo se revelan en un círculo alrededor del cursor (no en todo el grid).
   float dotGrid = lines.x * lines.y;
   float lineGrid = max(lines.x, lines.y);
-  float revealRadius = 0.24;
+  float revealRadius = mix(0.24, 0.12, uIsDark);
   // Caída tipo gaussiana: borde muy difuminado (sin corte duro) alrededor del cursor.
   float sigma = revealRadius * 0.5;
   float reveal = exp(-(dist * dist) / (2.0 * sigma * sigma)) * uHover;
@@ -122,6 +123,7 @@ const GridBackground = () => {
     const uHover = gl.getUniformLocation(prog, 'uHover');
     const uBaseA = gl.getUniformLocation(prog, 'uBaseA');
     const uColor = gl.getUniformLocation(prog, 'uColor');
+    const uIsDark = gl.getUniformLocation(prog, 'uIsDark');
 
     const dpr = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 2);
     const resize = () => {
@@ -153,6 +155,7 @@ const GridBackground = () => {
       gl.uniform1f(uHover, hover);
       gl.uniform1f(uBaseA, baseAFor(isDark));
       gl.uniform3f(uColor, col[0], col[1], col[2]);
+      gl.uniform1f(uIsDark, isDark ? 1.0 : 0.0);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     };
 
