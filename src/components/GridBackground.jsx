@@ -42,8 +42,8 @@ void main(){
   gl_FragColor = vec4(uColor, (uBaseA + glow) * grid * shade);
 }`;
 
-const colorFor = (dark) => (dark ? [0.62, 0.55, 1.0] : [0.45, 0.4, 0.88]);
-const baseAFor = (dark) => (dark ? 0.06 : 0.11);
+const colorFor = (dark) => (dark ? [0.55, 0.55, 0.58] : [0.45, 0.4, 0.88]);
+const baseAFor = (dark) => (dark ? 0.11 : 0.11);
 
 const GridBackground = () => {
   const canvasRef = useRef(null);
@@ -62,9 +62,9 @@ const GridBackground = () => {
       );
       const dark = document.documentElement.classList.contains('dark');
       canvas.style.backgroundImage = `linear-gradient(${
-        dark ? 'rgba(165,180,252,0.10)' : 'rgba(99,102,241,0.11)'
+        dark ? 'rgba(150,150,156,0.14)' : 'rgba(99,102,241,0.11)'
       } 1px, transparent 1px), linear-gradient(90deg, ${
-        dark ? 'rgba(165,180,252,0.10)' : 'rgba(99,102,241,0.11)'
+        dark ? 'rgba(150,150,156,0.14)' : 'rgba(99,102,241,0.11)'
       } 1px, transparent 1px)`;
       canvas.style.backgroundSize = '44px 44px';
       return undefined;
