@@ -60,14 +60,20 @@ const GridBackground = () => {
       console.warn(
         '[GridBackground] WebGL NO disponible (probablemente bloqueado por el entorno/navegador). Usando fallback CSS grid.',
       );
-      const dark = document.documentElement.classList.contains('dark');
-      canvas.style.backgroundImage = `linear-gradient(${
-        dark ? 'rgba(150,150,156,0.14)' : 'rgba(99,102,241,0.11)'
-      } 1px, transparent 1px), linear-gradient(90deg, ${
-        dark ? 'rgba(150,150,156,0.14)' : 'rgba(99,102,241,0.11)'
-      } 1px, transparent 1px)`;
-      canvas.style.backgroundSize = '44px 44px';
-      return undefined;
+      const applyFallback = (dark) => {
+        const c = dark ? 'rgba(150,150,156,0.14)' : 'rgba(99,102,241,0.11)';
+        canvas.style.backgroundImage = `linear-gradient(${c} 1px, transparent 1px), linear-gradient(90deg, ${c} 1px, transparent 1px)`;
+        canvas.style.backgroundSize = '44px 44px';
+      };
+      applyFallback(document.documentElement.classList.contains('dark'));
+      const fallbackObserver = new MutationObserver(() => {
+        applyFallback(document.documentElement.classList.contains('dark'));
+      });
+      fallbackObserver.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+      return () => fallbackObserver.disconnect();
     }
     gl.getExtension('OES_standard_derivatives');
     console.log('[GridBackground] WebGL OK — grid interactivo activo.');
@@ -191,7 +197,7 @@ const GridBackground = () => {
       window.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseleave', onLeave);
     };
-  }, [reduced]);
+  }, [reduced, colorFor, baseAFor]);
 
   return (
     <canvas
