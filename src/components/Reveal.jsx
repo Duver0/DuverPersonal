@@ -7,7 +7,7 @@ const HIDDEN = {
   'blur-in': 'opacity-0 blur-[8px] scale-[0.98]',
 };
 
-const VISIBLE = 'opacity-100 translate-y-0 translate-x-0 scale-100 blur-0';
+const VISIBLE = 'opacity-100';
 
 const Reveal = ({ children, delay = 0, className = '', variant = 'fade' }) => {
   const { ref, visible } = useReveal();
