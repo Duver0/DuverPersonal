@@ -36,7 +36,7 @@ void main(){
   float lineGrid = max(lines.x, lines.y);
   float revealRadius = 0.24;
   float reveal = (1.0 - smoothstep(revealRadius * 0.1, revealRadius, dist)) * uHover;
-  float grid = mix(dotGrid, lineGrid, reveal);
+  float grid = dotGrid + lineGrid * reveal;
   // Percepción de profundidad 3D:
   // - el fondo del pozo se atenúa levemente (sombra interior)
   // - el borde de la depresión capta luz (realce en el rim)
@@ -45,7 +45,10 @@ void main(){
   float ring = (1.0 - smoothstep(0.0, 0.03, abs(dist - radius))) * uHover * 0.22;
   float infl = dip;
   float glow = (infl * 0.18 + rim + ring) * 0.0;
-  gl_FragColor = vec4(uColor, (uBaseA + glow) * grid * shade);
+  // Degradado radial: el grid es más brillante cerca del cursor y se desvanece
+  // suavemente hacia afuera (visible también en modo oscuro, con puntos blancos).
+  float radial = mix(0.5, 1.0, reveal);
+  gl_FragColor = vec4(uColor, (uBaseA + glow) * grid * shade * radial);
 }`;
 
 const colorFor = (dark) => (dark ? [0.545, 0.361, 0.965] : [0, 0, 0]);
