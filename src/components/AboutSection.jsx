@@ -3,7 +3,7 @@ import Reveal from './Reveal.jsx';
 
 const AboutSection = () => (
   <Reveal variant="blur-in">
-    <section id="sobre-mi" className="rounded-3xl border border-slate-100 bg-white/80 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-md scroll-mt-24 dark:border-slate-800 dark:bg-transparent">
+    <section id="sobre-mi" className="rounded-3xl border border-slate-100 bg-white/80 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-md scroll-mt-24 dark:border-slate-800 dark:bg-gradient-to-b dark:from-slate-900/80 dark:to-slate-900/40 dark:bg-transparent">
       <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-500">Sobre mí</p>
       <h2 className="mt-3 text-3xl font-heading">Diseño soluciones con foco en negocio</h2>
       <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
