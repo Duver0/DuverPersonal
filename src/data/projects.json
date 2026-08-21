@@ -13,7 +13,24 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAnthropic-certifications%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": true
+    "featured": true,
+    "pushed_at": "2026-04-24T16:58:32Z"
+  },
+  {
+    "title": "DuverPersonal",
+    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/DuverPersonal/",
+    "repo": "https://github.com/Duver0/DuverPersonal",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false,
+    "pushed_at": "2026-08-20T19:20:13Z"
   },
   {
     "title": "Fit App",
@@ -29,22 +46,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Ffit-app%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
-  },
-  {
-    "title": "DuverPersonal",
-    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://duver0.github.io/DuverPersonal/",
-    "repo": "https://github.com/Duver0/DuverPersonal",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-08-20T14:28:47Z"
   },
   {
     "title": "Auto Nomina",
@@ -60,7 +63,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAuto-nomina%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-08-18T22:06:17Z"
   },
   {
     "title": "Ticketera",
@@ -75,7 +79,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fticketera-sigma.vercel.app?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-08-15T02:23:29Z"
   },
   {
     "title": "Photo Group",
@@ -90,7 +95,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fphoto-group-flame.vercel.app?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-08-03T15:58:27Z"
   },
   {
     "title": "Design Patterns",
@@ -105,7 +111,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fdesign-patterns%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-07-16T14:54:09Z"
   },
   {
     "title": "Calendar Test",
@@ -120,7 +127,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fcalendar-test%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-06-04T02:36:12Z"
   },
   {
     "title": "Ambient Music Player",
@@ -136,7 +144,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FAmbient-Music-Player%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-05-28T15:00:22Z"
   },
   {
     "title": "Natillera Pwa",
@@ -152,7 +161,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2Fnatillera-pwa%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-05-06T15:33:10Z"
   },
   {
     "title": "Mayerli Portfolio",
@@ -167,7 +177,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FMayerli-Portfolio?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-05-04T15:49:18Z"
   },
   {
     "title": "Generador De Historias Interactivas",
@@ -182,7 +193,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FGenerador-de-historias-interactivas%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2025-11-10T02:43:49Z"
   },
   {
     "title": "Preguntas Y Respuestas",
@@ -198,7 +210,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FPreguntas-y-Respuestas%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2025-11-10T00:11:58Z"
   },
   {
     "title": "Mp3 Downloader",
@@ -214,7 +227,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fmp3-downloader?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-06-04T17:30:58Z"
   },
   {
     "title": "Prompts Constructor",
@@ -225,7 +239,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fprompts-constructor?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-06-03T16:35:30Z"
   },
   {
     "title": "Scalable Notification Service API",
@@ -241,7 +256,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FScalable-Notification-Service-API?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-05-27T19:00:45Z"
   },
   {
     "title": "Turnos App",
@@ -255,7 +271,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fturnos-app?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-05-13T02:50:23Z"
   },
   {
     "title": "Damage Estimator",
@@ -271,7 +288,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2Fdamage-estimator?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-04-21T22:43:57Z"
   },
   {
     "title": "AUTO FRONT POM FACTORY",
@@ -285,7 +303,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAUTO_FRONT_POM_FACTORY?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-04-10T13:33:02Z"
   },
   {
     "title": "IA P1",
@@ -301,7 +320,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FIA_P1?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-04-10T02:26:32Z"
   },
   {
     "title": "AUTO FRONT SCREENPLAY",
@@ -315,7 +335,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAUTO_FRONT_SCREENPLAY?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-04-07T15:30:54Z"
   },
   {
     "title": "AUTO API SCREENPLAY",
@@ -329,7 +350,8 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FAUTO_API_SCREENPLAY?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-04-07T15:30:16Z"
   },
   {
     "title": "Serenity BDD",
@@ -342,6 +364,7 @@
     "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2FDuver0%2FSerenity-BDD?w=1200",
     "kind": "repo",
     "metric": "GitHub",
-    "featured": false
+    "featured": false,
+    "pushed_at": "2026-03-13T17:57:27Z"
   }
 ]
