@@ -17,20 +17,20 @@
     "pushed_at": "2026-04-24T16:58:32Z"
   },
   {
-    "title": "DuverPersonal",
-    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "title": "English Reminder",
+    "description": "Progressive Web App para aprender vocabulario en inglés mediante práctica diaria con repetición espaciada.",
     "stack": [
       "JavaScript",
-      "HTML",
-      "CSS"
+      "CSS",
+      "HTML"
     ],
-    "link": "https://duver0.github.io/DuverPersonal/",
-    "repo": "https://github.com/Duver0/DuverPersonal",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "link": "https://duver0.github.io/English-reminder/",
+    "repo": "https://github.com/Duver0/English-reminder",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FEnglish-reminder%2F?w=1200",
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false,
-    "pushed_at": "2026-08-20T19:20:13Z"
+    "pushed_at": "2026-08-21T21:05:05Z"
   },
   {
     "title": "Fit App",
@@ -47,7 +47,23 @@
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false,
-    "pushed_at": "2026-08-20T14:28:47Z"
+    "pushed_at": "2026-08-21T15:34:26Z"
+  },
+  {
+    "title": "DuverPersonal",
+    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/DuverPersonal/",
+    "repo": "https://github.com/Duver0/DuverPersonal",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false,
+    "pushed_at": "2026-08-21T06:48:01Z"
   },
   {
     "title": "Auto Nomina",
