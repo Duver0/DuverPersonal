@@ -17,6 +17,22 @@
     "pushed_at": "2026-04-24T16:58:32Z"
   },
   {
+    "title": "DuverPersonal",
+    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/DuverPersonal/",
+    "repo": "https://github.com/Duver0/DuverPersonal",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false,
+    "pushed_at": "2026-09-01T11:14:18Z"
+  },
+  {
     "title": "Auto Nomina",
     "description": "Automatización para descargar comprobantes de nómina del portal PSP de la Policía Nacional de Colombia.",
     "stack": [
@@ -32,22 +48,6 @@
     "metric": "GitHub Pages",
     "featured": false,
     "pushed_at": "2026-08-31T16:57:57Z"
-  },
-  {
-    "title": "DuverPersonal",
-    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://duver0.github.io/DuverPersonal/",
-    "repo": "https://github.com/Duver0/DuverPersonal",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false,
-    "pushed_at": "2026-08-31T12:55:28Z"
   },
   {
     "title": "English Reminder",
