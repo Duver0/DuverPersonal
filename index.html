@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#020617" />
   <meta name="description"
     content="Portafolio en React de Duver Betancur: desarrollo full stack, automatización y ciberseguridad." />
   <title>Duver Betancur – Desarrollador de Software</title>
@@ -18,9 +21,9 @@
   <script>
     (function () {
       const STORAGE_KEY = 'theme';
-      const isDarkPreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const persisted = window.localStorage.getItem(STORAGE_KEY);
-      const theme = persisted ?? (isDarkPreferred ? 'dark' : 'light');
+      // Claro como principal: solo se arranca en dark con guardado explícito.
+      const theme = persisted === 'dark' ? 'dark' : 'light';
       const root = document.documentElement;
       root.classList.toggle('dark', theme === 'dark');
       root.dataset.theme = theme;

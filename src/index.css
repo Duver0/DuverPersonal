@@ -12,8 +12,13 @@ body {
   min-height: 100vh;
 }
 
+html.dark body {
+  background-color: #000000;
+}
+
 .projects-pagination .swiper-pagination-bullet {
-  background: #c7d2fe;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
   opacity: 1;
   transition: all 0.3s ease;
 }
@@ -29,6 +34,13 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  .animate-float,
+  .animate-float-slow,
+  .animate-float-fast,
+  .animate-hue,
+  .animate-hue-slow {
+    animation: none !important;
   }
 }
 

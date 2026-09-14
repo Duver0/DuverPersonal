@@ -3,16 +3,12 @@ import { useEffect, useState } from 'react';
 const STORAGE_KEY = 'theme';
 const MEDIA_QUERY = '(prefers-color-scheme: dark)';
 
-const getPreferredTheme = () => {
-  if (typeof window === 'undefined') return 'light';
-  return window.matchMedia(MEDIA_QUERY).matches ? 'dark' : 'light';
-};
-
 const getInitialTheme = () => {
   if (typeof window === 'undefined') return 'light';
   const saved = window.localStorage.getItem(STORAGE_KEY);
   if (saved === 'dark' || saved === 'light') return saved;
-  return getPreferredTheme();
+  // Claro como tema principal: se ignora prefers-color-scheme en la carga inicial.
+  return 'light';
 };
 
 export const useTheme = () => {

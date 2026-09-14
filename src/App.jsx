@@ -1,5 +1,4 @@
-import GradientBackground from './components/GradientBackground.jsx';
-import GridBackground from './components/GridBackground.jsx';
+import AmbientBackground from './components/AmbientBackground.jsx';
 import ThemeToggle from './components/ThemeToggle.jsx';
 import SectionNav from './components/SectionNav.jsx';
 import Hero from './components/Hero.jsx';
@@ -14,10 +13,10 @@ import { useTheme } from './hooks/useTheme.js';
 const App = () => {
   const { isDark, toggleTheme } = useTheme();
 
+  // Base dark única: #000000 = BASE.dark (backgroundTokens.js) = html.dark body (index.css). No duplicar hex.
   return (
-    <div className="relative isolate min-h-screen overflow-hidden bg-slate-50 text-slate-900 transition-colors duration-500 dark:bg-slate-950 dark:text-slate-100">
-      <GradientBackground />
-      <GridBackground />
+    <div className="relative isolate min-h-screen overflow-hidden bg-slate-50 text-slate-900 transition-colors duration-500 dark:bg-black dark:text-slate-100">
+      <AmbientBackground variant="subtle" />
       <SectionNav />
       <div className="relative z-10">
         <div className="container mx-auto max-w-6xl space-y-10 px-4 py-12 sm:px-6 xl:pr-20">

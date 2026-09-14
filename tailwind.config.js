@@ -33,7 +33,7 @@ export default {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-12px)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
         hue: {
           '0%, 100%': { filter: 'hue-rotate(0deg)' },
