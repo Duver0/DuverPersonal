@@ -17,22 +17,6 @@
     "pushed_at": "2026-04-24T16:58:32Z"
   },
   {
-    "title": "DuverPersonal",
-    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
-    "stack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://duver0.github.io/DuverPersonal/",
-    "repo": "https://github.com/Duver0/DuverPersonal",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
-    "kind": "pages",
-    "metric": "GitHub Pages",
-    "featured": false,
-    "pushed_at": "2026-09-13T11:14:08Z"
-  },
-  {
     "title": "Fit App",
     "description": "Plataforma de ranking de gimnasio. Usuarios crean grupos, registran su progreso en ejercicios y compiten en rankings con sistema de disputas por mayoría simple.",
     "stack": [
@@ -47,7 +31,23 @@
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false,
-    "pushed_at": "2026-09-03T19:55:05Z"
+    "pushed_at": "2026-09-15T06:08:16Z"
+  },
+  {
+    "title": "DuverPersonal",
+    "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://duver0.github.io/DuverPersonal/",
+    "repo": "https://github.com/Duver0/DuverPersonal",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fduver0.github.io%2FDuverPersonal%2F?w=1200",
+    "kind": "pages",
+    "metric": "GitHub Pages",
+    "featured": false,
+    "pushed_at": "2026-09-14T17:55:28Z"
   },
   {
     "title": "Auto Nomina",
