@@ -23,7 +23,7 @@
       "TypeScript",
       "JavaScript",
       "Shell",
-      "Dockerfile"
+      "HTML"
     ],
     "link": "https://duver0.github.io/fit-app/",
     "repo": "https://github.com/Duver0/fit-app",
@@ -31,7 +31,7 @@
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false,
-    "pushed_at": "2026-09-16T04:15:39Z"
+    "pushed_at": "2026-09-16T19:50:17Z"
   },
   {
     "title": "DuverPersonal",
@@ -47,7 +47,7 @@
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false,
-    "pushed_at": "2026-09-15T11:15:45Z"
+    "pushed_at": "2026-09-16T10:58:11Z"
   },
   {
     "title": "Auto Nomina",
