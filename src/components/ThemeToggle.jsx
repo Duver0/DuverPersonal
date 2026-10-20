@@ -1,11 +1,25 @@
+import { Icon } from './ui/Icon.jsx';
+
+/**
+ * ThemeToggle — el conmutador de tema. Flota de verdad (abajo a la derecha), así
+ * que se separa con un bloque RELLENO (`--surface`), no con una sombra ni un
+ * filete; esquinas cuadradas, como el resto de la casa. 44 × 44 px.
+ *
+ * Conserva el contrato de `useTheme`: recibe `isDark` y `onToggle`.
+ *
+ * @param {object} props
+ * @param {boolean} props.isDark
+ * @param {() => void} props.onToggle
+ */
 const ThemeToggle = ({ isDark, onToggle }) => (
   <button
     type="button"
     onClick={onToggle}
-    aria-label="Cambiar tema"
-    className="fixed bottom-6 right-6 z-50 rounded-full border border-white/60 bg-white/80 p-3 shadow-lg shadow-slate-900/10 backdrop-blur transition hover:scale-105 focus-visible:ring-4 focus-visible:ring-brand-400/40 dark:border-slate-800/80 dark:bg-slate-900/80 sm:bottom-auto sm:left-6 sm:right-auto sm:top-1/2 sm:-translate-y-1/2"
+    aria-pressed={isDark}
+    aria-label={isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
+    className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center bg-surface text-ink transition-[transform,opacity] duration-[var(--dur-press)] ease-[var(--ease-out)] active:translate-y-px active:opacity-90"
   >
-    <i className={`fa-solid ${isDark ? 'fa-sun text-amber-300' : 'fa-moon text-brand-600'}`} />
+    <Icon name={isDark ? 'sun' : 'moon'} size={18} />
   </button>
 );
 

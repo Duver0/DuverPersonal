@@ -5,50 +5,40 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        /**
+         * Dirección «name-as-monument» §4 — máximo dos familias.
+         * - display: Bodoni Moda (didona autoalojada, `public/fonts/`), con la
+         *   cara de respaldo `Bodoni Moda Fallback` (Georgia + size-adjust 96 %)
+         *   definida en `src/index.css` para que la portada no salte de métrica
+         *   mientras la variable carga.
+         * - body: Inter (autoalojada; ya era la fuente de texto del repo).
+         */
+        display: ['Bodoni Moda', 'Bodoni Moda Fallback', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        heading: ['Space Grotesk', 'Inter', 'sans-serif'],
       },
       colors: {
-        brand: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
+        /**
+         * Tokens semánticos de la dirección §5 «paper-grey-brass».
+         * Los valores viven en `src/index.css` (`:root` / `.dark`), que es la
+         * única fuente de verdad cromática. Aquí sólo se exponen como clases.
+         *
+         * Nota: al ser valores `var(...)` en hex, estos tokens NO admiten
+         * modificador de opacidad (`bg-ground/50`). La dirección no lo necesita:
+         * la transparencia se aplica a nivel de elemento (`opacity`).
+         */
+        ground: 'var(--ground)', // campo por defecto: papel prensa
+        surface: 'var(--surface)', // un escalón más profundo: filetes, barras, muro
+        ink: 'var(--ink)', // tinta plena
+        muted: 'var(--muted)', // tinta apagada (pies, créditos, folios)
+        field: {
+          DEFAULT: 'var(--field)', // campo volteado (Disciplinas, Placa final)
+          ink: 'var(--field-ink)',
+          muted: 'var(--field-muted)',
         },
         accent: {
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
+          DEFAULT: 'var(--accent)', // latón: SÓLO relleno de UI
+          ink: 'var(--accent-ink)', // tinta sobre latón
         },
-      },
-      boxShadow: {
-        glow: '0 20px 80px rgba(79, 70, 229, 0.35)',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' },
-        },
-        hue: {
-          '0%, 100%': { filter: 'hue-rotate(0deg)' },
-          '50%': { filter: 'hue-rotate(22deg)' },
-        },
-        'node-pulse': {
-          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-          '50%': { transform: 'scale(1.35)', opacity: '0.7' },
-        },
-      },
-      animation: {
-        'float-slow': 'float 12s ease-in-out infinite',
-        'float-fast': 'float 8s ease-in-out infinite',
-        'hue-slow': 'hue 26s ease-in-out infinite',
-        'node-pulse-slow': 'node-pulse 1.8s ease-in-out infinite',
       },
     },
   },

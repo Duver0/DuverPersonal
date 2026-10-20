@@ -5,19 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#020617" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#e8e8e3" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14140f" />
   <meta name="description"
     content="Portafolio en React de Duver Betancur: desarrollo full stack, automatización y ciberseguridad." />
   <title>Duver Betancur – Desarrollador de Software</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" href="%BASE_URL%fonts/BodoniModa-latin.woff2" as="font" type="font/woff2"
+    crossorigin />
+  <link rel="preload" href="%BASE_URL%fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script>
     (function () {
       const STORAGE_KEY = 'theme';
@@ -32,8 +28,24 @@
   </script>
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 overflow-x-hidden scrollbar-thin">
+<body class="overflow-x-hidden scrollbar-thin bg-ground text-ink">
   <div id="root"></div>
+  <!--
+    Esta app es una SPA de React sin SSR: sin JavaScript no se dibuja nada. El
+    `<noscript>` sólo puede venir del HTML, no de React. Sus clases entran por el
+    `<link>` estático del CSS, así que funcionan sin script.
+  -->
+  <noscript>
+    <div class="mx-auto max-w-[var(--shell-max)] px-[var(--pad-x)] py-[var(--space-section)] text-ink">
+      <h1 class="t-monument">DUVER BETANCUR</h1>
+      <p class="t-lead">Esta página se compone con JavaScript: sin él no se dibuja el archivo de 24 proyectos. Las salidas honestas siguen a un clic.</p>
+      <ul class="t-body">
+        <li><a class="u-link" href="https://github.com/Duver0">Perfil en GitHub · 24 repositorios</a></li>
+        <li><a class="u-link" href="mailto:duverbetancurbedoya@outlook.com">duverbetancurbedoya@outlook.com</a></li>
+        <li><a class="u-link" href="%BASE_URL%DuverBetancurCV.pdf">Descargar CV (PDF)</a></li>
+      </ul>
+    </div>
+  </noscript>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

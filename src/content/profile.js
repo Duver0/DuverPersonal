@@ -1,20 +1,25 @@
 import profilePhoto from '../assets/img/ProfilePhoto.png';
-import cvPdf from '../assets/pdf/DuverBetancurCV.pdf';
 import projectsData from '../data/projects.json';
 
 export const EXPERIENCE_START_YEAR = 2019;
+
+/*
+  El CV vive en `public/` y no en `src/assets/`: así se puede enlazar también
+  desde el `<noscript>` de `index.html`, que se compone antes de que exista el
+  bundle. La ruta se construye con `import.meta.env.BASE_URL` para que respete el
+  `base` del despliegue (`./` en local, `/DuverPersonal/` en GitHub Pages).
+*/
+export const CV_PDF = `${import.meta.env.BASE_URL}DuverBetancurCV.pdf`;
 
 export const HERO_PROFILE = {
   name: 'Duver Betancur',
   headline: 'Desarrollador Full Stack & Automation Engineer',
   summary:
-    'Combino desarrollo web, ciberseguridad y automatización para crear productos estables, monitoreables y listos para crecer desde el día uno.',
+    'Desarrollo web, ciberseguridad y automatización: productos estables, monitoreables y listos para crecer.',
   location: 'Medellín, CO',
   availability: 'Disponible para freelance',
   photo: profilePhoto,
 };
-
-export const HERO_BADGES = ['React & Tailwind', 'Laravel & APIs', 'Automatización', 'Ciberseguridad'];
 
 export const CTA_LINKS = [
   {
@@ -31,7 +36,7 @@ export const CTA_LINKS = [
   },
   {
     label: 'Descargar CV',
-    href: cvPdf,
+    href: CV_PDF,
     icon: 'fa-file-arrow-down',
   },
 ];
@@ -42,32 +47,30 @@ export const STATS = [
   { value: '24', label: 'Lanzamientos en producción' },
 ];
 
-export const SKILLS = [
-  {
-    title: 'Frontend Engineering',
-    icon: 'fa-code',
-    gradient: 'from-brand-500/20 via-brand-500/10 to-transparent',
-    description: 'Construcción de interfaces con React + Redux priorizando performance y mantenibilidad.',
-    items: ['React, Redux, Vite', 'TailwindCSS, design systems', 'Testing UI y accesibilidad'],
-    badges: ['Component libraries', 'SSR / CSR'],
-  },
-  {
-    title: 'Backend & APIs',
-    icon: 'fa-database',
-    gradient: 'from-amber-400/20 via-amber-400/10 to-transparent',
-    description: 'Servicios Laravel/PHP con MySQL aplicando MVC y autenticación basada en roles.',
-    items: ['Laravel, PHP, MySQL', 'APIs RESTful, integración externa', 'ORM & optimización de queries'],
-    badges: ['API Design', 'DB Hardening'],
-  },
-  {
-    title: 'Automation & Data Engineering',
-    icon: 'fa-shield-halved',
-    gradient: 'from-emerald-400/20 via-emerald-400/10 to-transparent',
-    description: 'Automatización de tareas con Python/Selenium y procesos ETL para indexación y scraping de datos.',
-    items: ['Python, Selenium, automatización QA', 'Diseño de pipelines ETL', 'Gobernanza de accesos y OWASP'],
-    badges: ['Data Compliance', 'Security monitoring'],
-  },
-];
+/**
+ * Disciplinas (§8.3) — la frase del pliego de herramientas, en dos piezas.
+ *
+ * Este campo faltaba: la sección lo transcribía dentro del componente. Las doce
+ * herramientas no se pueden derivar de ningún otro campo (llegan como frases con
+ * descriptores), así que el contenido vive aquí, que es su sitio.
+ */
+export const DISCIPLINAS = {
+  estructura: 'Frontend, backend y automatización:',
+  herramientas: [
+    'React',
+    'Redux',
+    'Vite',
+    'TailwindCSS',
+    'Laravel',
+    'PHP',
+    'MySQL',
+    'Python',
+    'Selenium',
+    'ETL',
+    'OWASP',
+    'Docker',
+  ],
+};
 
 export const ABOUT_TAGS = ['Discovery técnico', 'Arquitectura ligera', 'DevSecOps', 'Mentoría de equipos'];
 

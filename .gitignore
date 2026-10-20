@@ -7,3 +7,8 @@ dist
 # Stray generated artifacts (not source)
 livefix.js
 ghpages.js
+
+# Skills de tasteskill: origen real en .opencode/skills (versionado); estos son junctions locales
+.agents/
+.aider-desk/
+.taste-skill/

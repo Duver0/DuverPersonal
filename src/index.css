@@ -1,33 +1,260 @@
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
+/* ============================================================================
+   DuverPersonal: hoja base
+   Dirección de arte: «name-as-monument» (.opencode/docs/design-direction.md)
+   Este archivo es la ÚNICA fuente de verdad de:
+     §4  escala tipográfica y fuentes autoalojadas
+     §5  paleta semántica «paper-grey-brass» (valores exactos en hex)
+     §6  campo de papel (fondo base + capa de grano)
+     §7  rejilla y ritmo vertical
+     §10 tokens de movimiento
+   Los componentes se limitan a consumir las variables/clases de aquí.
+   ============================================================================ */
+
+/* ---------------------------------------------------------------------------
+   §4 Fuentes autoalojadas (public/fonts/, OFL, sin CDN)
+   Bodoni Moda variable: fvar `wght 400–900` + `opsz 6–96` (def 11).
+   Inter            variable: fvar `wght 100–900`.
+   Cada familia se sirve en dos subconjuntos (latin / latin-ext): la página
+   está en español y no necesita cirílico, griego ni vietnamita.
+   Las URL son absolutas (`/fonts/…`): Vite antepone el `base` del despliegue.
+   --------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src:
+    url('/fonts/BodoniModa-latin.woff2') format('woff2-variations'),
+    url('/fonts/BodoniModa-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src:
+    url('/fonts/BodoniModa-latin-ext.woff2') format('woff2-variations'),
+    url('/fonts/BodoniModa-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src:
+    url('/fonts/Inter-latin.woff2') format('woff2-variations'),
+    url('/fonts/Inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src:
+    url('/fonts/Inter-latin-ext.woff2') format('woff2-variations'),
+    url('/fonts/Inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/*
+   Respaldo métrico de Bodoni Moda (§4 y §12.4): Georgia local con
+   `size-adjust: 96 %`. Evita el salto de maqueta de la portada mientras la
+   variable carga. Va en la pila `fontFamily.display` de tailwind.config.js.
+*/
+@font-face {
+  font-family: 'Bodoni Moda Fallback';
+  src: local('Georgia'), local('Georgia Pro'), local('Times New Roman');
+  font-weight: 400 900;
+  font-style: normal;
+  size-adjust: 96%;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ---------------------------------------------------------------------------
+   §5.1 / §5.2 Paleta «paper-grey-brass»: valores exactos
+   El acento (latón) es RELLENO de UI: nunca escribe sobre papel salvo con
+   `--accent-ink` encima.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* CLARO — el pliego de papel */
+  --ground: #e8e8e3; /* papel prensa, el campo por defecto */
+  --surface: #dcdcd6; /* un escalón más profundo: filetes, barras, muro */
+  --ink: #181715; /* tinta plena */
+  --muted: #5b5a54; /* tinta apagada (ajuste medido §5.2: AA sobre ground y surface) */
+  --accent: #bfb21a; /* latón: SÓLO relleno */
+  --accent-ink: #181715; /* tinta sobre latón */
+  --field: #181715; /* el campo volteado (Disciplinas, Placa final) */
+  --field-ink: #e8e8e3;
+  --field-muted: #a9a79c;
+
+  /* §10 Foco: anillo de 2 px en tinta, offset 2 px, sin retardo, siempre visible */
+  --focus: #181715;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* §4 Escala tipográfica: cinco escalones, todos `clamp()`, a cualquier ancho */
+  --t-nano: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem); /* 13,0 → 14,0 px */
+  --t-body: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem); /* 17,0 → 20,0 px */
+  --t-lead: clamp(1.375rem, 1.28rem + 0.5vw, 1.75rem); /* 22,0 → 28,0 px */
+  --t-head: clamp(1.875rem, 1.6rem + 1.2vw, 2.75rem); /* 30,0 → 44,0 px */
+  --t-monument: clamp(3.5rem, 13vw, 11.875rem); /* 56,0 → 190,0 px */
+
+  /* §7 Rejilla y espacio */
+  --shell-max: clamp(1240px, 80vw, 1600px); /* a 1440 sigue en 1240; a 1920, 1536 */
+  --shell-gap: 24px;
+  --pad-x: 20px; /* móvil */
+  --space-section: clamp(8rem, 6rem + 6.67vw, 12rem); /* 128 → 192 px */
+  --space-block: clamp(1.75rem, 1.1rem + 2.67vw, 3.5rem); /* 28 → 56 px */
+
+  /* §10 Movimiento — todo lo que se mueve lee estos tokens */
+  --dur-press: 140ms;
+  --dur-hover: 180ms;
+  --dur-enter: 620ms;
+  --dur-fade: 1600ms;
+  --stagger: 70ms;
+  --rise: 24px;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  /* OSCURO — el mismo catálogo en la sala de lectura de noche */
+  --ground: #14140f;
+  --surface: #1f1f19;
+  --ink: #ecebe4;
+  --muted: #a3a196;
+  --accent: #cfc253;
+  --accent-ink: #14140f;
+  --field: #23231c; /* en oscuro el campo no se invierte a papel: sube un escalón */
+  --field-ink: #ecebe4;
+  --field-muted: #a3a196;
+  --focus: #ecebe4;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --pad-x: 24px; /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --pad-x: 32px; /* desktop */
+  }
+}
+
+/*
+   A partir de 1600 px la caja útil deja de crecer con el viewport (topa en
+   1600) y la respiración de sección se acorta: si `--space-section` siguiera
+   subiendo con `vw`, a 1920 habría 192 px arriba y otros 192 abajo en cada
+   sección, que es el «hueco vertical» que se ve a esa anchura. Baja a 144–160 px
+   sin tocar el ritmo de tablet ni de móvil.
+*/
+@media (min-width: 1600px) {
+  :root {
+    --space-section: clamp(9rem, 8.4vw, 10rem); /* 144 → 160 px */
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   §6 Campo de papel: base del sitio
+   Única fuente de verdad del color de fondo: `html`/`body` son la única
+   superficie y `App.jsx` sólo monta el grano y ordena los planos.
+   --------------------------------------------------------------------------- */
+
+html {
+  background-color: var(--ground);
+}
+
 body {
   font-family: theme('fontFamily.body');
-  background-color: #f8fafc;
-  min-height: 100vh;
+  background-color: var(--ground);
+  color: var(--ink);
+  min-height: 100svh;
 }
 
-html.dark body {
-  background-color: #000000;
+/*
+   Capa de grano: SVG en `data:` URI (feTurbulence), sin red, sin imagen, sin
+   movimiento, es papel, así que es `prefers-reduced-motion`-seguro por
+   construcción. Se monta una sola vez (fase 2) con `aria-hidden="true"`.
+   El velo real queda entre el 2 % y el 4 %.
+*/
+@layer components {
+  .field-grain {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /*
+     El ruido vive en `::before`, no en la capa. Motivo medido, no estético:
+     `inspect.mjs` lee `background-image` del ELEMENTO, así que un `url(...)` a
+     pantalla completa se interpretaría como «hay una imagen cubriendo el
+     viewport» y haría pasar todo el texto por «va sobre media» (desactivando la
+     comprobación de contraste). Un pseudo-elemento además no lo devuelve
+     `elementFromPoint`, de modo que el grano tampoco puede contar como algo que
+     tapa texto. Mismo píxel.
+  */
+  .field-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.28;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 180px 180px; /* tesela repetida: el grano no escala con el viewport */
+  }
+
+  .dark .field-grain::before {
+    mix-blend-mode: screen;
+    opacity: 0.18;
+  }
 }
 
-.projects-pagination .swiper-pagination-bullet {
-  background: #ffffff;
-  border: 1px solid #d1d5db;
-  opacity: 1;
-  transition: all 0.3s ease;
+/* ---------------------------------------------------------------------------
+   §10 Foco: token reutilizable
+   --------------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus);
+  outline-offset: var(--focus-offset);
 }
 
-.projects-pagination .swiper-pagination-bullet-active {
-  width: 24px;
-  border-radius: 9999px;
-  background: #6366f1;
+/*
+   El anillo de foco viaja con el tono: sobre `--field` (que en claro es tinta
+   plena) un anillo de tinta no se vería. Los tonos los declaran `Section` y
+   `Surface` con `data-tone`.
+*/
+[data-tone='field'] {
+  --focus: var(--field-ink);
 }
+
+[data-tone='accent'] {
+  --focus: var(--accent-ink);
+}
+
+/* ---------------------------------------------------------------------------
+   §3.1 / §10 Guard de movimiento reducido
+   Corta duraciones de transición y de animación y deja los tokens de movimiento
+   en su valor de reposo, de modo que cualquier receta que lea `--dur-*` / `--rise`
+   queda conforme sin repetir el media query. Cubre las transiciones de `Reveal`,
+   `Action`, las barras de Trayectoria y el subrayado de los enlaces.
+   Las dos animaciones vigentes —`.foto-turno` (crossfade) y
+   `.monumento-asienta` (timeline de scroll)— tienen además su apagado explícito
+   más abajo: a un `animation-timeline` no le afecta el recorte de duraciones.
+   --------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -35,13 +262,25 @@ html.dark body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .animate-float,
-  .animate-float-slow,
-  .animate-float-fast,
-  .animate-hue,
-  .animate-hue-slow {
-    animation: none !important;
+
+  :root {
+    --dur-press: 0ms;
+    --dur-hover: 0ms;
+    --dur-enter: 0ms;
+    --dur-fade: 0ms;
+    --stagger: 0ms;
+    --rise: 0px;
   }
+}
+
+/* ---------------------------------------------------------------------------
+   Barra de desplazamiento fina, restilizada a la paleta nueva.
+   El nombre de clase se conserva: `index.html` la usa en `<body>`.
+   --------------------------------------------------------------------------- */
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
 }
 
 .scrollbar-thin::-webkit-scrollbar {
@@ -53,18 +292,282 @@ html.dark body {
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #94a3b8;
+  background: var(--muted);
   border-radius: 2px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: var(--ink);
 }
 
-.dark .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #475569;
+/* ---------------------------------------------------------------------------
+   §4 Recetas de texto: la escalera en un solo sitio
+   Cada primitiva de `src/components/ui/Type.jsx` aplica exactamente UNA de
+   estas clases: nadie escribe un `font-size` suelto. `opsz` va declarado por
+   rol porque Bodoni Moda arranca en la instancia óptica de texto (§4): sin él,
+   el monumento se dibuja con las formas gruesas del tamaño pequeño.
+   --------------------------------------------------------------------------- */
+
+@layer components {
+  .t-monument {
+    font-family: theme('fontFamily.display');
+    font-size: var(--t-monument);
+    line-height: 0.86;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    font-variation-settings: 'opsz' 96, 'wght' 400;
+  }
+
+  .t-head {
+    font-family: theme('fontFamily.display');
+    font-size: var(--t-head);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    font-variation-settings: 'opsz' 40, 'wght' 400;
+    max-width: 30ch;
+  }
+
+  .t-lead {
+    font-family: theme('fontFamily.display');
+    font-size: var(--t-lead);
+    line-height: 1.25;
+    font-variation-settings: 'opsz' 20, 'wght' 400;
+    max-width: 62ch;
+  }
+
+  .t-body {
+    font-family: theme('fontFamily.body');
+    font-size: var(--t-body);
+    line-height: 1.55;
+    max-width: 62ch;
+  }
+
+  .t-nano {
+    font-family: theme('fontFamily.body');
+    font-size: var(--t-nano);
+    line-height: 1.45;
+    letter-spacing: 0.005em;
+    max-width: 48ch;
+  }
 }
 
-.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+/* ---------------------------------------------------------------------------
+   §8.9 Marco de imagen
+   La foto se adapta al marco, nunca al revés: `cover` recorta y el foco lo fija
+   cada pieza con `object-position`. El fondo del hueco es `--surface` (un
+   escalón de papel), no un gris de carga.
+   --------------------------------------------------------------------------- */
+
+@layer components {
+  /*
+     Dentro de `components` a propósito: fuera de capa, un `.marco` ganaría a
+     CUALQUIER utilidad de Tailwind (lo sin-capar vence a `@layer utilities`), y
+     el marco tiene que poder posicionarse con `absolute` desde cada pieza.
+     Aquí no se declara `position`: lo pone quien lo usa.
+  */
+  .marco {
+    overflow: hidden;
+    background-color: var(--surface);
+  }
+
+  .marco img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   §10 Enlaces: subrayado de 2 px que aparece de izquierda a derecha.
+   `transform`, no `width`: se queda en el compositor.
+   --------------------------------------------------------------------------- */
+
+@layer components {
+  .u-link {
+    position: relative;
+    color: currentColor;
+  }
+
+  .u-link::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--dur-hover) var(--ease-out);
+  }
+
+  .u-link:hover::after,
+  .u-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   §8.0 / §10 Crossfade de la portada
+   Tres fotos, 5,4 s de permanencia y 1,6 s de fundido por relevo; el ciclo son
+   tres turnos de 7 s (21 s). Sólo `opacity`.
+   Las TRES capas animan la misma receta y se desfasan 7 s entre sí con
+   `animation-delay`. La primera entra con −3,8 s, así que a t=0 arranca DENTRO de
+   su permanencia (opacity 1) y no «entra fundida desde el papel»: así el estado
+   inicial del hero es una foto nítida. Antes la primera no animaba
+   (`anim: none`, opacity 1) y las otras dos vivían en su estado de reposo, de
+   modo que a t≈13,3 s coincidían tres capas a la vez (1,00 / 0,67 / 0,32). Con
+   las tres animadas y desfasadas 7 s, en cualquier instante hay como mucho DOS
+   capas por encima de 0,05.
+   --------------------------------------------------------------------------- */
+
+@layer components {
+  .foto-turno {
+    opacity: 0;
+    animation: foto-turno 21s var(--ease-inout) infinite;
+  }
+
+  /* §10: el crossfade se detiene cuando la pestaña no se ve (visibilitychange). */
+  .is-pausado .foto-turno,
+  .foto-turno.is-pausado {
+    animation-play-state: paused;
+  }
+}
+
+/*
+   PORTADA EN ESCRITORIO (§8.0, recomposición 1920).
+   A partir de 1024 px el nombre vive sobre papel en las columnas 1–7 y la placa
+   fotográfica ocupa las 8–12, a sangre por la derecha. El monumento se topa con
+   `10.2vw` para que «BETANCUR» quepa dentro de su caja de siete columnas: con el
+   valor pleno del token (13vw) la palabra medía 985 px a 1440 y se metía bajo la
+   foto. A 1920 el tope ya es el token (190 px) y la palabra mide 999,5 px dentro
+   de 1101. No es un sexto escalón: es el mismo `--t-monument` con un techo de
+   caja, y sólo en esta pieza.
+*/
+@layer components {
+  /*
+    El `@media` va DENTRO de la capa: Tailwind procesa `@layer components` y
+    eleva su contenido; si la capa se anida dentro del medio, el medio se pierde
+    y el techo de `10.2vw` se aplica también a móvil (medido: 39,8 px a 390 en
+    vez de los 56 px del token). Así el techo sólo existe a partir de 1024.
+  */
+  @media (min-width: 1024px) {
+    .monumento-portada {
+      font-size: min(var(--t-monument), 10.2vw);
+    }
+  }
+}
+
+@keyframes foto-turno {
+  0% {
+    opacity: 0;
+  }
+
+  7.6% {
+    opacity: 1;
+  }
+
+  33.3% {
+    opacity: 1;
+  }
+
+  40.9% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   §10 Firma de movimiento de la portada: el nombre baja un 5,5 % mientras se
+   recorre la portada. Dentro de `@supports` a propósito: un motor sin timeline
+   de scroll se queda con el nombre QUIETO (fallback estático explícito) y no con
+   el estado final. Sólo `transform`.
+   --------------------------------------------------------------------------- */
+
+@layer components {
+  /*
+    Mismo motivo que en `.monumento-portada`: el `@supports` debe quedar dentro
+    de la capa para que Tailwind no lo descarte al elevar el contenido. Sin él,
+    un motor sin `animation-timeline` aplica el estado final (`scale(0.945)`) de
+    una animación de 0 s y encoge el nombre de forma permanente.
+  */
+  @supports (animation-timeline: scroll()) {
+    .monumento-asienta {
+      animation: monumento-asienta linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 60vh;
+    }
+  }
+}
+
+@keyframes monumento-asienta {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.945);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   §3.1 / §10 Guard propio de las recetas de esta fase
+   El guard global recorta duraciones, pero NO apaga un timeline de scroll: por
+   eso la firma del monumento se apaga aquí de forma explícita. El crossfade se
+   retira entero: con movimiento reducido, React tampoco monta las otras dos
+   fotos, de modo que la última nunca puede quedarse fija en pantalla.
+   --------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .foto-turno {
+    animation: none !important;
+    opacity: 1;
+  }
+
+  .monumento-asienta {
+    animation: none !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   §8.5 / §9 Archivo: el pliego, la tirada y sus salidas (fase 2B-2)
+   Dos recetas y nada más. La tirada NO recorta la lista en React: la ocultación
+   cuelga de la clase `js` (la pone `src/App.jsx` antes del primer render), así
+   que quitar `js` de `<html>` devuelve las 24 entradas al pliego y el estado sin
+   script se puede comprobar en vivo. La salida pone su subrayado de 2 px sobre
+   el rótulo —no sobre la caja de 44 px—: `Action` ya envuelve el rótulo en un
+   `span`, y ese es el nodo que se subraya.
+   --------------------------------------------------------------------------- */
+
+@layer components {
+  .js .pliego > li:not([data-en-pliego]) {
+    display: none;
+  }
+
+  .salida > span {
+    position: relative;
+  }
+
+  /* Subrayado por `transform`, no por `width`: se queda en el compositor. */
+  .salida > span::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--dur-hover) var(--ease-out);
+  }
+
+  .salida:hover > span::after,
+  .salida:focus-visible > span::after {
+    transform: scaleX(1);
+  }
 }
