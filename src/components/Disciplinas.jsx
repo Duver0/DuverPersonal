@@ -31,7 +31,7 @@ const Disciplinas = () => (
           {DISCIPLINAS.estructura}{' '}
           {/* La lista de herramientas va un escalón por debajo: es textura. */}
           <Body as="span" className="text-field-ink">
-            {DISCIPLINAS.herramientas.join(', ')}.
+            {DISCIPLINAS.detalle}
           </Body>
         </Lead>
       </Reveal>

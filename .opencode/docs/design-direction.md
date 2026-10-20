@@ -409,7 +409,7 @@ Sustituyen a las tres que proponía la v1 (`commons:92496111`, CC BY-SA 4.0 → 
 **La banda es fotografía de archivo** (§8.9): `riachuelo-santa-elena-av-derecha-medellin-1930.jpg` (postal coloreada a mano de 1930, **dominio público**, 1920×1219) en marco **21:9** a sangre, `object-fit: cover`, `object-position: 50% 42%`, `loading="lazy"`. Es el **único descanso** de la página y la única foto que se sale por el borde inferior. Su leyenda, en `--t-nano` `--muted` sobre el borde izquierdo: `Archivo · Medellín, 1930 · Gonzalo Escovar Gaviria · Wikimedia Commons`.
 
 ### 2. Cifras — `stats` (líneas de cifras tranquilas)
-**Geometría.** Columnas 2–7. Lista de definición: **tres filas**, cada una de dos carriles. Carril 1: 132 px, cifra alineada a la derecha, `--t-head`, tinta plena, `tabular-nums`. 24 px de hueco. Carril 2: una frase de ≤40ch a `--t-body` en `--muted`, primera línea alineada con la cifra. Filas separadas 28 px. El título («Cifras», 1 palabra, `--t-head`) va 56 px arriba, sobre la sangría de las frases. 18vh de aire arriba y abajo.
+**Geometría.** Columnas 2–7. Lista de definición: **seis filas**, cada una de dos carriles. Carril 1: 132 px, cifra alineada a la derecha, `--t-head`, tinta plena, `tabular-nums`. 24 px de hueco. Carril 2: una frase de ≤48ch a `--t-body` en `--muted`, primera línea alineada con la cifra. Filas separadas 28 px. El título («Cifras», 1 palabra, `--t-head`) va 56 px arriba, sobre la sangría de las frases. 18vh de aire arriba y abajo. **Las seis cifras se derivan del dato** (años desde mayo de 2019, casas distintas de `EXPERIENCE`, `PROJECTS.length`, `kind === 'pages'`, tecnologías distintas de los `stack`) para que el `sync-projects` no las convierta en mentira; sólo «4 áreas» es una constante de copy.
 **Contenido real.** `+6 / Años en la industria tech` · `+3 / Años como Full Stack developer` · `24 / Lanzamientos en producción`.
 **Lo que NO es.** No son tres tarjetas con icono y número gigante en índigo, no hay contador animado (`useCountUp` se retira: «las cifras se dicen sin subir la voz»), no hay rejilla de 3 columnas.
 **Un inserto de archivo, no una sección con foto.** Columnas 9–11, alineado con la primera fila de cifras: un **cajón de fichero de tarjetas** (`.taste-skill/imagery/assets/copyright-card-catalog-drawer.jpg`, **dominio público**, Wikimedia Commons) en **4:5, ≤200 px de ancho**, con el duotono de §8.9 y su leyenda en `--t-nano` `--muted`: `Archivo · Michael Holley Swtpc6800 · Wikimedia Commons`. Es el **antepasado físico de la sección que sustituye a las capturas** — fichas ordenadas, un índice dibujado — y entra como **viñeta de imprenta**, no como ilustración: la sección sigue sosteniéndose con el aire y el texto.
@@ -591,14 +591,16 @@ Todo lo marcado **[REAL]** sale del repo y no se toca. Lo marcado **[SAMPLE]** e
 | Inicio · acción primaria | «Agenda una llamada» | 18 | [REAL] `profile.js:21` |
 | Inicio · marca de agua | «Duver Betancur» | 14 | [REAL] |
 | Menú / índice | Inicio · Prólogo · Cifras · Disciplinas · Trayectoria · Archivo · Sobre mí · Contacto | — | [SAMPLE] los rótulos de sección son nuevos; «Inicio» y «Contacto» ya existían (`SectionNav.jsx:5-11`) |
-| Prólogo · statement | «Combino desarrollo web, ciberseguridad y automatización para crear productos estables, monitoreables y listos para crecer desde el día uno.» | 136 (3 líneas a 62ch) | [REAL] `profile.js:11` |
-| Prólogo · rótulo 1 | «Medellín, Colombia · desde 2019» | 30 | [REAL] (año: `profile.js:5`) |
-| Prólogo · rótulo 2 | «Disponible para freelance» | 25 | [REAL] `profile.js:13` |
+| Prólogo · statement | «Desarrollo web, ciberseguridad y automatización: productos estables, monitoreables y listos para crecer.» | 105 (4 líneas a 390) | [REAL] `profile.js:17-18` |
+| Prólogo · párrafo | «Desde 2019 construyo software: empecé revisando código y atendiendo soporte de segundo nivel; hoy trabajo de la interfaz a la base de datos y automatizo lo que se repite.» | 167 (3 líneas a 1440 / 5 a 390) | [REAL] `profile.js:19-20` |
+| Prólogo · rótulo 1 | «Medellín, CO · desde 2019» | 24 | [REAL] (año: `profile.js:4`) |
+| Prólogo · rótulo 2 | «Disponible para freelance» | 25 | [REAL] `profile.js:22` |
 | Cifras · título | «Cifras» | 6 | [SAMPLE] |
-| Cifras · filas | «+6 / Años en la industria tech» · «+3 / Años como Full Stack developer» · «24 / Lanzamientos en producción» | — | [REAL] `profile.js:39-43` |
+| Cifras · filas (6) | «+7 / Años en la industria tech» · «24 / Proyectos con repositorio público» · «14 / Aplicaciones desplegadas y enlazadas» · «5 / Empresas y equipos desde 2019» · «11 / Tecnologías en uso entre esos proyectos» · «4 / Áreas: web, backend, automatización y seguridad» | — | [REAL] derivadas de `projects.json` y `EXPERIENCE`; se recalculan solas |
 | Cifras · leyenda del inserto | «Archivo · Michael Holley Swtpc6800 · Wikimedia Commons» | — | [REAL] `assets.mjs --credits` |
 | Disciplinas · título | «Disciplinas» | 11 | [SAMPLE] |
-| Disciplinas · frase | «Frontend, backend y automatización: React, Redux, Vite, TailwindCSS, Laravel, PHP, MySQL, Python, Selenium, ETL, OWASP, Docker.» | 119 (2 líneas a 62ch) | [REAL] piezas de `profile.js:51-67`; el orden es [SAMPLE] |
+| Disciplinas · frase | «Frontend, backend y automatización: interfaces que aguantan uso real, APIs que otros equipos consumen y procesos que dejan de hacerse a mano.» | 150 (3 líneas a 62ch) | [REAL] `profile.js:53-55`; el orden es [SAMPLE] |
+| Disciplinas · detalle | «React, Redux, Vite y TailwindCSS en la interfaz; Laravel, PHP y MySQL en el servidor; Python, Selenium y ETL para lo repetitivo; OWASP y Docker antes de producción.» | 169 (3 líneas a 62ch) | [REAL] `profile.js:56-57`; agrupa las doce herramientas por dónde se usan |
 | Disciplinas · retirado | las 3 descripciones de `SKILLS[].description` | 105–120 c/u | **[SAMPLE] decisión: salen del render, siguen en `profile.js`.** Alternativa: tres líneas con glosa en `--t-nano` |
 | Trayectoria · título | «Trayectoria» | 11 | [SAMPLE] |
 | Trayectoria · barras (5) | Sofka Technologies · Tecnología Jurídica · Talent.com · Emtelco · Fluid Attacks (+ periodo) | — | [REAL] `profile.js:74-122` |

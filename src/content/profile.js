@@ -16,6 +16,8 @@ export const HERO_PROFILE = {
   headline: 'Desarrollador Full Stack & Automation Engineer',
   summary:
     'Desarrollo web, ciberseguridad y automatización: productos estables, monitoreables y listos para crecer.',
+  intro:
+    'Desde 2019 construyo software: empecé revisando código y atendiendo soporte de segundo nivel; hoy trabajo de la interfaz a la base de datos y automatizo lo que se repite.',
   location: 'Medellín, CO',
   availability: 'Disponible para freelance',
   photo: profilePhoto,
@@ -41,35 +43,20 @@ export const CTA_LINKS = [
   },
 ];
 
-export const STATS = [
-  { value: '+6', label: 'Años en la industria tech' },
-  { value: '+3', label: 'Años como Full Stack developer' },
-  { value: '24', label: 'Lanzamientos en producción' },
-];
-
 /**
- * Disciplinas (§8.3) — la frase del pliego de herramientas, en dos piezas.
+ * Disciplinas (§8.3) — dos piezas de copy, no una lista.
  *
- * Este campo faltaba: la sección lo transcribía dentro del componente. Las doce
- * herramientas no se pueden derivar de ningún otro campo (llegan como frases con
- * descriptores), así que el contenido vive aquí, que es su sitio.
+ * `estructura` dice qué hace (frontend, backend y automatización) y `detalle`
+ * agrupa las doce herramientas por dónde se usan, no por orden de llegada. Vive
+ * aquí, en el contenido, y no en el componente: las herramientas no se pueden
+ * derivar de ningún otro campo y el copy factual tiene un solo sitio. La sección
+ * sólo decide la jerarquía con la que se pinta cada pieza.
  */
 export const DISCIPLINAS = {
-  estructura: 'Frontend, backend y automatización:',
-  herramientas: [
-    'React',
-    'Redux',
-    'Vite',
-    'TailwindCSS',
-    'Laravel',
-    'PHP',
-    'MySQL',
-    'Python',
-    'Selenium',
-    'ETL',
-    'OWASP',
-    'Docker',
-  ],
+  estructura:
+    'Frontend, backend y automatización: interfaces que aguantan uso real, APIs que otros equipos consumen y procesos que dejan de hacerse a mano.',
+  detalle:
+    'React, Redux, Vite y TailwindCSS en la interfaz; Laravel, PHP y MySQL en el servidor; Python, Selenium y ETL para lo repetitivo; OWASP y Docker antes de producción.',
 };
 
 export const ABOUT_TAGS = ['Discovery técnico', 'Arquitectura ligera', 'DevSecOps', 'Mentoría de equipos'];
@@ -125,3 +112,17 @@ export const EXPERIENCE = [
 ];
 
 export const PROJECTS = projectsData;
+
+const YEARS = Math.max(1, Math.floor((Date.now() - Date.UTC(EXPERIENCE_START_YEAR, 4, 1)) / 31557600000));
+const CASAS = new Set(EXPERIENCE.map((p) => p.company)).size;
+const DESPLEGADAS = PROJECTS.filter((p) => p.kind === 'pages').length;
+const TECNOLOGIAS = new Set(PROJECTS.flatMap((p) => p.stack ?? [])).size;
+
+export const STATS = [
+  { value: `+${YEARS}`, label: 'Años en la industria tech' },
+  { value: String(PROJECTS.length), label: 'Proyectos con repositorio público' },
+  { value: String(DESPLEGADAS), label: 'Aplicaciones desplegadas y enlazadas' },
+  { value: String(CASAS), label: 'Empresas y equipos desde 2019' },
+  { value: String(TECNOLOGIAS), label: 'Tecnologías en uso entre esos proyectos' },
+  { value: '4', label: 'Áreas: web, backend, automatización y seguridad' },
+];

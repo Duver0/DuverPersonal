@@ -1,6 +1,6 @@
 import { EXPERIENCE_START_YEAR, HERO_PROFILE } from '../content/profile.js';
 import { PROLOGO_FOTO } from '../content/archivo.js';
-import { Lead, Nano, Reveal, Section, Shell } from './ui/index.js';
+import { Body, Lead, Nano, Reveal, Section, Shell } from './ui/index.js';
 
 /**
  * Prólogo (§8.1) — el único descanso deliberado de la página.
@@ -24,7 +24,10 @@ const Prologo = () => (
       <Reveal step={0}>
         <Lead id="prologo-statement">{HERO_PROFILE.summary}</Lead>
       </Reveal>
-      <Reveal step={1} className="mt-7 flex flex-wrap gap-x-12 gap-y-4">
+      <Reveal step={1}>
+        <Body className="mt-7">{HERO_PROFILE.intro}</Body>
+      </Reveal>
+      <Reveal step={2} className="mt-7 flex flex-wrap gap-x-12 gap-y-4">
         <Nano className="max-w-[150px] text-muted">
           {HERO_PROFILE.location} · desde {EXPERIENCE_START_YEAR}
         </Nano>
@@ -34,7 +37,7 @@ const Prologo = () => (
       </Reveal>
     </Shell>
 
-    <Reveal step={2} className="mt-10">
+    <Reveal step={3} className="mt-10">
       <div className="marco aspect-[21/9] w-full">
         <img
           src={PROLOGO_FOTO.src}
