@@ -5,12 +5,10 @@ import { Body, Lead, Nano, Reveal, Section, Shell } from './ui/index.js';
 /**
  * Prólogo (§8.1) — el único descanso deliberado de la página.
  *
- * Tercio superior: el statement real de `profile.js` en `--t-lead` y 62 ch,
- * sin pasar de cuatro líneas a 390 px (medido: 4). 28 px debajo, dos rótulos en
- * `--t-nano`. 40 px más abajo, la postal coloreada a mano a sangre, 21:9, que se
- * sale por debajo del pliegue: en la primera pantalla del Prólogo se ve su 60 %
- * superior y el resto llega con el scroll. Debajo, la leyenda y el sello de
- * crédito.
+ * Tercio superior en una columna: el statement real de `profile.js`, largo y sin
+ * recorte, en `--t-lead` y 62 ch. 28 px debajo, el `intro` en `--t-body`; otros
+ * 28 px y dos rótulos `Nano`. 40 px más abajo, la postal coloreada a mano a
+ * sangre, 21:9. Debajo, la leyenda y el sello de crédito.
  */
 const Prologo = () => (
   <Section

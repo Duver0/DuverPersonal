@@ -15,7 +15,7 @@ export const HERO_PROFILE = {
   name: 'Duver Betancur',
   headline: 'Desarrollador Full Stack & Automation Engineer',
   summary:
-    'Desarrollo web, ciberseguridad y automatización: productos estables, monitoreables y listos para crecer.',
+    'Construyo productos digitales que combinan desarrollo web, ciberseguridad y automatización. Me enfoco en crear software seguro, eficiente y fácil de mantener, utilizando tecnologías modernas y herramientas de inteligencia artificial para optimizar procesos y desarrollar soluciones listas para crecer.',
   intro:
     'Desde 2019 construyo software: empecé revisando código y atendiendo soporte de segundo nivel; hoy trabajo de la interfaz a la base de datos y automatizo lo que se repite.',
   location: 'Medellín, CO',
@@ -44,19 +44,18 @@ export const CTA_LINKS = [
 ];
 
 /**
- * Disciplinas (§8.3) — dos piezas de copy, no una lista.
+ * Disciplinas (§8.3) — una sola pieza de copy, no una lista.
  *
- * `estructura` dice qué hace (frontend, backend y automatización) y `detalle`
- * agrupa las doce herramientas por dónde se usan, no por orden de llegada. Vive
- * aquí, en el contenido, y no en el componente: las herramientas no se pueden
- * derivar de ningún otro campo y el copy factual tiene un solo sitio. La sección
- * sólo decide la jerarquía con la que se pinta cada pieza.
+ * `estructura` dice qué hace (frontend, backend y automatización) y enumera las
+ * doce herramientas por dónde se usan, no por orden de llegada: la frase y la
+ * enumeración son el mismo texto. Vive aquí, en el contenido, y no en el
+ * componente: las herramientas no se pueden derivar de ningún otro campo y el
+ * copy factual tiene un solo sitio. La sección sólo decide la tipografía y la
+ * medida con la que se pinta.
  */
 export const DISCIPLINAS = {
   estructura:
-    'Frontend, backend y automatización: interfaces que aguantan uso real, APIs que otros equipos consumen y procesos que dejan de hacerse a mano.',
-  detalle:
-    'React, Redux, Vite y TailwindCSS en la interfaz; Laravel, PHP y MySQL en el servidor; Python, Selenium y ETL para lo repetitivo; OWASP y Docker antes de producción.',
+    'Frontend, backend y automatización: interfaces que aguantan uso real, APIs que otros equipos consumen y procesos que dejan de hacerse a mano. React, Redux, Vite y TailwindCSS en la interfaz; Laravel, PHP y MySQL en el servidor; Python, Selenium y ETL para lo repetitivo; OWASP y Docker antes de producción.',
 };
 
 export const ABOUT_TAGS = ['Discovery técnico', 'Arquitectura ligera', 'DevSecOps', 'Mentoría de equipos'];
