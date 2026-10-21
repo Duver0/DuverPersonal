@@ -21,8 +21,9 @@
     "description": "Portafolio personal construido con React, Vite y Tailwind. Preparado para trabajar con Bun como package manager y desplegarse en GitHub Pages.",
     "stack": [
       "JavaScript",
-      "HTML",
-      "CSS"
+      "CSS",
+      "Shell",
+      "Batchfile"
     ],
     "link": "https://duver0.github.io/DuverPersonal/",
     "repo": "https://github.com/Duver0/DuverPersonal",
@@ -30,7 +31,7 @@
     "kind": "pages",
     "metric": "GitHub Pages",
     "featured": false,
-    "pushed_at": "2026-10-19T12:22:26Z"
+    "pushed_at": "2026-10-20T19:21:37Z"
   },
   {
     "title": "Auto Nomina",
